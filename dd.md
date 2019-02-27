@@ -1,21 +1,23 @@
 # DD
 
-Insert the original sd card and check the name of the device (usually mmcblkX or sdcX):
+O DD é um programa de clonagem que mantem as propriedades das partições clonadas, inclusive bits nulos são clonados.
+
+Insira o cartão SD e/ou pendrive e verifique o nome do dispositivo (geralmente mmcblkX ou sdcX):
+
 ``sudo fdisk -l``
 
-In my case the sd card is /dev/mmsbkl0. Now you have to unmount the device:
+No meu caso, o cartão SD é /dev/mmsbkl0. Agora você tem que desmontar o dispositivo:
+
 ``sudo umount /dev/mmcblk0``
 
-Now to create an image of the device:
+Agora, para criar uma imagem do dispositivo:
+
 ``sudo dd if=/dev/mmcblk0 of=~/sd-card-copy.img``
 
-This will take a while.
+Isso vai demorar um pouco dependendo do tamanho do armazenamento clonado.
 
-Once it's finished, insert the empty sd card. If the device is different (USB or other type of sd card reader) verify its name and be sure to unmount it:
-``sudo fdisk -l``
-``sudo umount /dev/mmcblk0``
+Escrevendo a imagem para um dispositivo:
 
-Write the image to the device:
 ``sudo dd if=~/sd-card-copy.img of=/dev/mmcblk0``
 
-The write operation is much slower than before.
+A operação de gravação é muito mais lenta que de leitura.
