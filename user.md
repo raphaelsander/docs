@@ -22,5 +22,5 @@ Retirar o usuário do grupo de sudoers:
 
 Outra maneira de alterar se um usuário é sudoers ou não é editando o arquivo /etc/sudoers.
 
-Verificar as altenticações realizadas por cada usuário:  
+Verificar as autenticações realizadas por cada usuário:  
 ``cat /var/log/auth.log``
