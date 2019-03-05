@@ -12,9 +12,9 @@ Para localizar um arquivo ou pasta:
 ``locate "nomedoarquivo"``
 
 Exibir arquivo:  
-``cat nomedoarquivo.txt``
-``more nomedoarquivo.txt``
-``less nomedoarquivo.txt``
+``cat nomedoarquivo.txt``  
+``more nomedoarquivo.txt``  
+``less nomedoarquivo.txt``  
 
 Exibir arquivo de traz para frente:  
 ``tac nomedoarquivo.txt``
