@@ -25,3 +25,16 @@ site:blackcat :.net
 Carregar cache do site:
 cache:blackcat.com.br
 *Server também como hitórico*
+
+Pesquisa pelo título:
+intitle:"Hacked by"
+intilte:"Acesso Restrito" inurl:admin
+
+Procurar páginas que não possuem index:
+intile:"index of" :.com.br
+
+Pesquisa por extensão:
+inurl:acesso.txt ext:txt
+inurl:acesso filetype:txt
+
+Bonus: pesquisar sobre dorks
