@@ -21,6 +21,8 @@ nc -vnlp 5050 -e cmd.exe ==> Executa o CMD
 Escaneando portas:  
 ``nc -vnz 172.16.1.5 19-30`` Será escaneado da porta 19 atá a 30.  
 ``nc -vnz 172.16.1.5 22`` Será escaneado somente a porta 22.
+``nc -vnz -w2 172.16.1.5 22`` Será escaneado levando em consideração o Timeout de 2 segundos [-w2].
+``nc -vnzu -w 172.16.1.5 22`` Será feito o escaneamento UDP [u].
 
 Vericando whois pelo NC:  
 ``nc -v 200.160.2.3 43  
