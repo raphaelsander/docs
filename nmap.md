@@ -26,3 +26,7 @@ Nível de agressividade:
 -T3 = normal (padrão)
 -T4 = scan rápido
 -T5 = scan muito rápido e barulhento
+
+Exemplos:
+nmap -v -A 192.168.0.0/24 => Faz o escanemento em modo verbose trazendo informações de serviços e SO.
+nmap -sS -Pn 192.168.0.0/24 => Faz um SYS Scan ignorando a detecção de hosts ativos.
