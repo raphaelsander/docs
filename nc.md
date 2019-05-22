@@ -29,3 +29,21 @@ Vericando whois pelo NC:
 globo.com``
 * A porta 43 é utilizada pelo WHOIS.
 * O IP 200.160.2.3 é do registro.br.
+
+## Banner Grabbing
+### HTTP
+nc -vn www.alvo.com 80
+HEAD / HTTP/1.0
+
+### FTP
+nc -v 192.168.1.100
+USER admin
+PASS 123456
+
+ftp 192.168.1.100
+Sempre teste com usuário 'anonymous' e senha 'anonymous'.
+Caso o login tenha sido aceito, será retornado o código '230 Login successful'.
+
+
+
+
