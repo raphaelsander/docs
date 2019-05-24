@@ -2,21 +2,27 @@
 
 Via NC podemos analisar melhor o que acontece em uma requisição HTTP.
 
+```
 nc -v site.com 80  
 GET / HTTP/1.0
+```
 
 O retorno será paracido com:  
-``HTTP/1.1 200 OK  
+```
+HTTP/1.1 200 OK  
 ...  
 ...  
 Server: Apache/2.2.22 (Debian)  
 ...  
 ...  
-Código da página normalmente em HTML``  
+Código da página normalmente em HTML  
+```  
 
 Para retornar apenas o HEAD:  
-``nc -v site.com 80  
-HEAD / HTTP/1.0``  
+```
+nc -v site.com 80  
+HEAD / HTTP/1.0
+```  
 
 ### Lista de erros:  
 1xx - Informação  
