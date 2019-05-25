@@ -33,7 +33,7 @@
 ```nmap -sS -Pn 192.168.0.0/24``` => Faz um SYS Scan ignorando a detecção de hosts ativos.  
 
 Em casos que o firewall opera efetuando o DROP podemos realizar um escaneamento com uma porta de saída diferente:  
-nmap -v -sS --source-port 53 192.168.1.100  
+```nmap -v -sS --source-port 53 192.168.1.100```  
 
 Porém para explorar essa porta teremos que utilizar uma porta de saída permitida pelo firewall:  
 ```nc -p53 -vn 192.168.1.100 8081```  
