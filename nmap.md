@@ -40,3 +40,15 @@ Porém para explorar essa porta teremos que utilizar uma porta de saída permiti
 *Nesse caso estaremos utilizando a porta 53 como saída para conectar na porta 8081.*  
 
 Nesse tipo de bypass no firewall, podemos utilizar as portas **53**, **443** e **80** que são portas normalmente liberadas pelo firewall.
+
+## Enumeração de SMB
+O nmap possui scripts para enumeração de SMB que normalmente se encontram no diretório **/usr/share/nmap/scripts**
+
+Descobrimento de OS através do SMB:
+nmap -v --script=smb-os-discovery 192.168.0.114
+
+Enumeração de compartilhamento SMB:
+nmap -v --script=smb-enum-shares 192.168.0.114
+
+Podemos também executar todos os scripts possíveis do SMB:
+nmap -v --script=smb* 192.168.0.114
