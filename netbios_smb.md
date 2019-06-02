@@ -36,3 +36,24 @@ Caso retorne 'Comando concluído com êxito.' significa que é permitido NULL SE
 ``net use \\192.168.1.100 /delete`` Apaga a conexão.
 ``net use x: /delete`` Para apagar o mapeamento de unidade de rede.
 É interessante apagar uma conexão para agilizar outra.
+
+### Através do Linux
+
+Para listar as máquinas disponíveis na rede:
+sudo nbtscan -r 192.168.0.0/24
+*Necessário efetuar a instalação do pacote nbtscan.*
+
+A enumeração no Linux pode ser feita através do smbclient:
+smbclient --help Para ver as opções.
+*Necessário efetuar a instalação do pacote smbclient.*
+
+Para listar os compartilhamentos sem senha de uma máquina:
+smbclient -L //192.168.0.114 -N
+
+Listar os compartilhamentos passando um usuário sem senha:
+smbclient -L //192.168.0.114 -N -U administrador
+
+Para conectar ao diretório compartilhado:
+smbclient //192.168.0.114/Público -N
+
+
