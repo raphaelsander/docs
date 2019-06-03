@@ -42,13 +42,19 @@ Porém para explorar essa porta teremos que utilizar uma porta de saída permiti
 Nesse tipo de bypass no firewall, podemos utilizar as portas **53**, **443** e **80** que são portas normalmente liberadas pelo firewall.
 
 ## Enumeração de SMB
-O nmap possui scripts para enumeração de SMB que normalmente se encontram no diretório **/usr/share/nmap/scripts**
+O nmap possui scripts para enumeração de SMB que normalmente se encontram no diretório **/usr/share/nmap/scripts**.
 
-Descobrimento de OS através do SMB:
+Descobrimento de OS através do SMB:  
+```bash
 nmap -v --script=smb-os-discovery 192.168.0.114
+```
 
-Enumeração de compartilhamento SMB:
+Enumeração de compartilhamento SMB:  
+```bash
 nmap -v --script=smb-enum-shares 192.168.0.114
+```
 
-Podemos também executar todos os scripts possíveis do SMB:
+Podemos também executar todos os scripts possíveis do SMB:  
+```bash
 nmap -v --script=smb* 192.168.0.114
+```
