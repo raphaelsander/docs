@@ -1,26 +1,43 @@
 # Usuários  
+
 Exibir todos os usuários:  
-``cat /etc/passwd``
+```bash
+cat /etc/passwd
+```
 
 Adicionar um usuário:  
-``adduser nomedousuario``
+```bash
+adduser nomedousuario
+```
 
 Deletar um usuário:  
-``deluser nomedousuario``
+```bash
+deluser nomedousuario
+```
 
 Definir uma senha para o usuário:  
-``passwd nomedousuario``
+```bash
+passwd nomedousuario
+```
 
 Entrar no terminal com um usuário específico:  
-``su nomedousuario``
+```bash
+su nomedousuario
+```
 
 Adicionar o usuário ao grupo de sudoers:  
-``adduser nomedousuario sudo``
+```bash
+adduser nomedousuario sudo
+```
 
 Retirar o usuário do grupo de sudoers:  
-``deluser nomedousuario sudo``
+```bash
+deluser nomedousuario sudo
+```
 
-Outra maneira de alterar se um usuário é sudoers ou não é editando o arquivo /etc/sudoers.
+Outra maneira de alterar se um usuário é sudoers ou não é editando o arquivo **/etc/sudoers**.
 
 Verificar as autenticações realizadas por cada usuário:  
-``cat /var/log/auth.log``
+```bash
+cat /var/log/auth.log
+```
