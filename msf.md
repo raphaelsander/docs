@@ -64,3 +64,9 @@ meterpreter > shell
 
 Exibindo módulos auxiliares:
 msf > show auxiliary
+
+Utilizando um módulo auxiliar:
+msf > use auxiliary/scanner/smb/smb_version
+msf > show options
+msf > set RHOSTS 172.16.1.5
+msf > run
