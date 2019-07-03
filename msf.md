@@ -62,6 +62,12 @@ meterpreter > help
 Abrindo o shell:
 meterpreter > shell
 
+Colocando meterpreter em segundo plano:
+meterpreter > background
+
+Retomando meterpreter:
+msf > session -i 4
+
 Exibindo módulos auxiliares:
 msf > show auxiliary
 
