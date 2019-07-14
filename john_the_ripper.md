@@ -12,3 +12,11 @@ Diretório de wordlist padrão:
 
 Podemos ver o número de linhas dessa wordlist da seguinte forma:
 wc -l password.lst
+
+Alterando o arquivo /etc/john/john.conf podemos adicionar rules para criação de wordlists mutáveis.
+Ex.:
+$[0-9]$[0-9] ==> Adiciona dois numeros no final da palavra.
+^[0-9] ==> Adiciona um número no começo da palavra.
+
+Utilizando wordlist:
+john --wordlist=words.txt --rules --stdout > mutacao.txt
