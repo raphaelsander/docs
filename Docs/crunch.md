@@ -55,17 +55,47 @@ symbols14-space:
 [!@#$%^&*()-_+= ]
 ``  
 
-symbols-all                   = [!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/]
-symbols-all-space             = [!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/ ]
+symbols-all:  
+``
+[!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/]
+``  
+symbols-all-space:  
+``
+[!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/ ]
+``  
 
-ualpha                        = [ABCDEFGHIJKLMNOPQRSTUVWXYZ]
-ualpha-space                  = [ABCDEFGHIJKLMNOPQRSTUVWXYZ ]
-ualpha-numeric                = [ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789]
-ualpha-numeric-space          = [ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ]
-ualpha-numeric-symbol14       = [ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=]
-ualpha-numeric-symbol14-space = [ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+= ]
-ualpha-numeric-all            = [ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/]
-ualpha-numeric-all-space      = [ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/ ]
+ualpha:  
+``
+[ABCDEFGHIJKLMNOPQRSTUVWXYZ]
+``  
+ualpha-space:  
+``
+[ABCDEFGHIJKLMNOPQRSTUVWXYZ ]
+``  
+ualpha-numeric:  
+``
+[ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789]
+``  
+ualpha-numeric-space:  
+``
+[ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ]
+``  
+ualpha-numeric-symbol14:  
+``
+[ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=]
+``  
+ualpha-numeric-symbol14-space:  
+``
+[ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+= ]
+``  
+ualpha-numeric-all:  
+``
+[ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/]
+``  
+ualpha-numeric-all-space:  
+``
+[ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/ ]
+``  
 
 lalpha                        = [abcdefghijklmnopqrstuvwxyz]
 lalpha-space                  = [abcdefghijklmnopqrstuvwxyz ]
@@ -106,7 +136,7 @@ ualpha-numeric-space-sv:
 ``  
 ualpha-numeric-symbol14-sv:  
 ``
-[ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ012``3456789!@#$%^&*()-_+=]
+[ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789!@#$%^&*()-_+=]
 ``  
 ualpha-numeric-symbol14-space-sv:  
 ``
