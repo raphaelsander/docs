@@ -13,10 +13,10 @@ crunch 10 10 -t usuario^%% -o pass_user.txt
 ```
 *Exemplo de saída: usuario@56*
 
-**@** = minuscula
-**,** = maiuscula
-**%** = numeros
-**^** = caracteres especiais
+**@** = minuscula  
+**,** = maiuscula  
+**%** = numeros  
+**^** = caracteres especiais  
 
 ## Charset
 
@@ -28,29 +28,29 @@ crunch 6 6 -f charset.lst numeric
 ```
 
 ### Charset Default
-hex-lower:
+hex-lower:  
 ``
 [0123456789abcdef]
 ``  
-hex-upper:
+hex-upper:  
 ``
 [0123456789ABCDEF]
 ``  
 
-numeric:
+numeric:  
 ``
 [0123456789]
 ``  
-numeric-space:
+numeric-space:  
 ``
 [0123456789 ]
 ``  
 
-symbols14:
+symbols14:  
 ``
 [!@#$%^&*()-_+=]
 ``  
-symbols14-space:
+symbols14-space:  
 ``
 [!@#$%^&*()-_+= ]
 ``  
@@ -88,35 +88,35 @@ mixalpha-numeric-all-space = [abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWX
 ## SWEDISH CHAR-SUPPORT
 
 ### Uppercase
-ualpha-sv:
+ualpha-sv:  
 ``
 [ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ]
 ``  
-ualpha-space-sv:
+ualpha-space-sv:  
 ``
 [ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ ]
 ``  
-ualpha-numeric-sv:
+ualpha-numeric-sv:  
 ``
 [ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789]
 ``  
-ualpha-numeric-space-sv:
+ualpha-numeric-space-sv:  
 ``
 [ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789 ]
 ``  
-ualpha-numeric-symbol14-sv:
+ualpha-numeric-symbol14-sv:  
 ``
 [ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ012``3456789!@#$%^&*()-_+=]
 ``  
-ualpha-numeric-symbol14-space-sv:
+ualpha-numeric-symbol14-space-sv:  
 ``
 [ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789!@#$%^&*()-_+= ]
 ``  
-ualpha-numeric-all-sv:
+ualpha-numeric-all-sv:  
 ``
 [ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/]
 ``  
-ualpha-numeric-all-space-sv:
+ualpha-numeric-all-space-sv:  
 ``
 [ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/ ]
 ``  
