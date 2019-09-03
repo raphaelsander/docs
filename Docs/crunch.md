@@ -97,23 +97,71 @@ ualpha-numeric-all-space:
 [ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/ ]
 ``  
 
-lalpha                        = [abcdefghijklmnopqrstuvwxyz]
-lalpha-space                  = [abcdefghijklmnopqrstuvwxyz ]
-lalpha-numeric                = [abcdefghijklmnopqrstuvwxyz0123456789]
-lalpha-numeric-space          = [abcdefghijklmnopqrstuvwxyz0123456789 ]
-lalpha-numeric-symbol14       = [abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_+=]
-lalpha-numeric-symbol14-space = [abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_+= ]
-lalpha-numeric-all 	      = [abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/]
-lalpha-numeric-all-space      = [abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/ ]
+lalpha:  
+``
+[abcdefghijklmnopqrstuvwxyz]
+``  
+lalpha-space:  
+``
+[abcdefghijklmnopqrstuvwxyz ]
+``  
+lalpha-numeric:  
+``
+[abcdefghijklmnopqrstuvwxyz0123456789]
+``  
+lalpha-numeric-space:  
+``
+[abcdefghijklmnopqrstuvwxyz0123456789 ]
+``  
+lalpha-numeric-symbol14:  
+``
+[abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_+=]
+``  
+lalpha-numeric-symbol14-space:  
+``
+[abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_+= ]
+``  
+lalpha-numeric-all:  
+``
+[abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/]
+``  
+lalpha-numeric-all-space:  
+``
+[abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/ ]
+``  
 
-mixalpha                   = [abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ]
-mixalpha-space             = [abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ]
-mixalpha-numeric           = [abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789]
-mixalpha-numeric-space     = [abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ]
-mixalpha-numeric-symbol14  = [abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=]
-mixalpha-numeric-symbol14-space = [abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+= ]
-mixalpha-numeric-all       = [abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/]
-mixalpha-numeric-all-space = [abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/ ]
+mixalpha:  
+``
+[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ]
+``  
+mixalpha-space:  
+``
+[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ]
+``  
+mixalpha-numeric:  
+``
+[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789]
+``  
+mixalpha-numeric-space:  
+``
+[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ]
+``  
+mixalpha-numeric-symbol14:  
+``
+[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=]
+``  
+mixalpha-numeric-symbol14-space:  
+``
+[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+= ]
+``  
+mixalpha-numeric-all:  
+``
+[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/]
+``  
+mixalpha-numeric-all-space:  
+``
+[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/ ]
+``  
 
 ## SWEDISH CHAR-SUPPORT
 
@@ -221,8 +269,12 @@ mixalpha-numeric-all-space-sv:
 
 ## Crunch e outros aplicativos
 
-Crunch e aircrack-ng:
+Crunch e aircrack-ng:  
+```bash
 crunch 2 4 abcdefghijklmnopqrstuvwxyz | aircrack-ng /root/Mycapfile.cap -e MyESSID -w-
+```
 
-Crunch e airolib-ng:
+Crunch e airolib-ng:  
+```bash
 crunch 10 10 12345 --stdout | airolib-ng testdb -import passwd -
+```
