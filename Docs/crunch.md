@@ -152,69 +152,69 @@ ualpha-numeric-all-space-sv:
 ``  
 
 ### Lowercase
-lalpha-sv:
+lalpha-sv:  
 ``
 [abcdefghijklmnopqrstuvwxyzåäö]
-``
-lalpha-space-sv:
+``  
+lalpha-space-sv:  
 ``
 [abcdefghijklmnopqrstuvwxyzåäö ]
-``
-lalpha-numeric-sv:
+``  
+lalpha-numeric-sv:  
 ``
 [abcdefghijklmnopqrstuvwxyzåäö0123456789]
-``
-lalpha-numeric-space-sv:
+``  
+lalpha-numeric-space-sv:  
 ``
 [abcdefghijklmnopqrstuvwxyzåäö0123456789 ]
-``
-lalpha-numeric-symbol14-sv:
+``  
+lalpha-numeric-symbol14-sv:  
 ``
 [abcdefghijklmnopqrstuvwxyzåäö0123456789!@#$%^&*()-_+=]
-``
-lalpha-numeric-symbol14-space-sv:
+``  
+lalpha-numeric-symbol14-space-sv:  
 ``
 [abcdefghijklmnopqrstuvwxyzåäö0123456789!@#$%^&*()-_+= ]
-``
-lalpha-numeric-all-sv:
+``  
+lalpha-numeric-all-sv:  
 ``
 [abcdefghijklmnopqrstuvwxyzåäö0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/]
-``
-lalpha-numeric-all-space-sv:
+``  
+lalpha-numeric-all-space-sv:  
 ``
 [abcdefghijklmnopqrstuvwxyzåäö0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/ ]
-``
+``  
 
 ### Mixcase
-mixalpha-sv:
+mixalpha-sv:  
 ``
 [abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ]
-``
-mixalpha-space-sv:
+``  
+mixalpha-space-sv:  
 ``
 [abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ ]
 ``  
-mixalpha-numeric-sv:
+mixalpha-numeric-sv:  
 ``
 [abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789]
 ``  
-mixalpha-numeric-space-sv:
+mixalpha-numeric-space-sv:  
 ``
 [abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789 ]
 ``  
-mixalpha-numeric-symbol14-sv:
+mixalpha-numeric-symbol14-sv:  
 ``
 [abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789!@#$%^&*()-_+=]
 ``  
-mixalpha-numeric-symbol14-space-sv:
+mixalpha-numeric-symbol14-space-sv:  
 ``
 [abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789!@#$%^&*()-_+= ]
 ``  
-mixalpha-numeric-all-sv:
+mixalpha-numeric-all-sv:  
 ``
 [abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/]
 ``  
-mixalpha-numeric-all-space-sv:
+mixalpha-numeric-all-space-sv:  
 ``
 [abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/ ]
 ``  
