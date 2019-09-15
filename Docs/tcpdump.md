@@ -71,7 +71,13 @@ tcpdump -vnAr scanner.pcap port 21 | grep "pass"
 ```
 ```bash
 tcpdump -vnXr scanner.pcap port 21 | grep "pass"
-```
+```  
+
+Pesquisa por conexões SYN ACK:
+```bash
+tcpdump -vnr portscanlog.pcap | grep "\[S.]"
+```  
+*Normalmente utilizado para analisar capturas de portscan.*
 
 Verificar os IPs envolvidos:  
 ```bash

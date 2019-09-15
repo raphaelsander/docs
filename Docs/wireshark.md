@@ -28,6 +28,11 @@ Pesquisa por string na URL de requisições HTTP:
 ``http.request.uri.contains default``  
 ``http.request.uri.contains hacker``  
 
+Pesquisa por conexões SYN ACK:  
+``tcp.flags==0x12``  
+``tcp.flags.syn==1 && tcp.flags.ack==1``  
+*Normalmente utilizado para analisar capturas de portscan.* 
+
 Filtros do exibição do Wireshark consulte:  
 https://wiki.wireshark.org/DisplayFilters
 
