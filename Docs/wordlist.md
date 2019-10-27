@@ -3,6 +3,7 @@
 Há vários sites e ferramentas para a geração de wordlists que são utilizadas normalmente em ataques de força bruta (brute force).
 
 Segue alguns links:
+  - https://weakpass.com/ (Preferido)
   - https://packetstormsecurity.com/Crackers/wordlists/
   - https://hashes.org/left.php
   - https://wiki.skullsecurity.org/Passwords
