@@ -1,7 +1,9 @@
 # XSS
 
 ## XSS Reflected
+```html
 <script>alert('Teste XSS')</script>
+```
 
 ## XSS Stored
 Possui um impacto maior pois o script fica salvo na página e toda vez que essa página é acessada o script é executado.
