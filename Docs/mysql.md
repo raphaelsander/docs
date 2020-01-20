@@ -88,4 +88,5 @@ https://elias.praciano.com/2013/02/mysql-comandos-basicos/
 https://elias.praciano.com/2014/03/mysql-o-comando-select/  
 https://targettrust.com.br/blog/comando-select/  
 http://www.devfuria.com.br/sql/mysql-pelo-terminal/
+https://gist.github.com/hofmannsven/9164408
 
