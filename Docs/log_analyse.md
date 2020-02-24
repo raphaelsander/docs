@@ -12,6 +12,12 @@ Mostrar o início do arquivo:
 head access.log
 ```
 
+Contar o número de linhas do arquivo:
+
+```bash
+wc -l access.log
+```
+
 Mostrar somente a primeira linha do arquivo:
 
 ```bash
@@ -21,26 +27,34 @@ head -n1 access.log
 Trazer a primeira coluna do arquivo access.log, utilizando separador " "(espaço):
 
 ```bash
-cat access.log | cut -d " " -f1
+cat access.log | cut -d" " -f1
 ```
 
 Trazer a primeira coluna do arquivo access.log, utilizando separador " "(espaço) e sem repetir linhas iguais:
 
 ```bash
-cat access.log | cut -d " " -f1 | sort -u
+cat access.log | cut -d" " -f1 | sort -u
+```
+
+Contar o número de hosts:
+
+```bash
+cat access.log | cut -d" " -f1 | sort -u | wc -l
 ```
 
 Trazer a primeira coluna do arquivo access.log, utilizando separador " "(espaço), organizando de forma crescente e contando as linhas repetidas:
 
 ```bash
-cat access.log | cut -d " " -f1 | sort | uniq -c
+cat access.log | cut -d" " -f1 | sort | uniq -c
 ```
 
-Trazer a primeira coluna do arquivo access.log, utilizando separador " "(espaço), organizando de forma crescente, contando as linhas repetidas e eliminando as linhas repetidas:
+Trazer a primeira coluna do arquivo access.log, utilizando separador " "(espaço), organizando de forma crescente, contando as linhas repetidas e organizando em ordem crescente:
 
 ```bash
-cat access.log | cut -d " " -f1 | sort | uniq -c | sort -un
+cat access.log | cut -d" " -f1 | sort | uniq -c | sort -un
 ```
+
+*Cuidado, pois nesse comando não são exibidos todos os IPs, pois o sort leva em consideração a primeira coluna.*
 
 Remover as linhas repetidas(u), organizar em ordem numérica(n) reversa(r):
 
@@ -57,7 +71,7 @@ cat access.log | grep "177.138.28.7"
 Utilizar delimitador e exibir apenas um valor para a segunda coluna:
 
 ```bash
-cat access.log | grep "177.138.28.7" | cut -d '"' -f2 | sort -uniq
+cat access.log | grep "177.138.28.7" | cut -d'"' -f2 | sort -uniq
 ```
 
 Procurar por determinado diretório, resposta ou cliente:
