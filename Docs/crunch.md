@@ -2,16 +2,20 @@
 
 Ferramenta para geração de wordlist.
 
-Gerando senhas de 4 dígitos numérico:  
+Gerando senhas de 4 dígitos numérico:
+
 ```bash
 crunch 4 4 0123456789 -o pin.txt
 ```
 
-Gerando senhas com máscara:  
+Gerando senhas com máscara:
+
 ```bash
 crunch 10 10 -t usuario^%% -o pass_user.txt
 ```
-*Exemplo de saída: usuario@56*
+
+Exemplo de saída:
+*usuario@56*
 
 **@** = minuscula  
 **,** = maiuscula  
@@ -22,259 +26,200 @@ crunch 10 10 -t usuario^%% -o pass_user.txt
 
 Caminho padrão do charset.lst: **/usr/share/crunch/charset.lst**
 
-Utilizando charset:  
+Utilizando charset:
+
 ```bash
 crunch 6 6 -f charset.lst numeric
 ```
 
 ### Charset Default
+
 hex-lower:  
-``
-[0123456789abcdef]
-``  
+``[0123456789abcdef]``
+
 hex-upper:  
-``
-[0123456789ABCDEF]
-``  
+``[0123456789ABCDEF]``
 
 numeric:  
-``
-[0123456789]
-``  
+``[0123456789]``
+
 numeric-space:  
-``
-[0123456789 ]
-``  
+``[0123456789 ]``
 
 symbols14:  
-``
-[!@#$%^&*()-_+=]
-``  
+``[!@#$%^&*()-_+=]``
+
 symbols14-space:  
-``
-[!@#$%^&*()-_+= ]
-``  
+``[!@#$%^&*()-_+= ]``
 
 symbols-all:  
-``
-[!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/]
-``  
+``[!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/]``
+
 symbols-all-space:  
-``
-[!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/ ]
-``  
+``[!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/ ]``
 
 ualpha:  
-``
-[ABCDEFGHIJKLMNOPQRSTUVWXYZ]
-``  
+``[ABCDEFGHIJKLMNOPQRSTUVWXYZ]``
+
 ualpha-space:  
-``
-[ABCDEFGHIJKLMNOPQRSTUVWXYZ ]
-``  
+``[ABCDEFGHIJKLMNOPQRSTUVWXYZ ]``
+
 ualpha-numeric:  
-``
-[ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789]
-``  
+``[ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789]``
+
 ualpha-numeric-space:  
-``
-[ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ]
-``  
+``[ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ]``
+
 ualpha-numeric-symbol14:  
-``
-[ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=]
-``  
+``[ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=]``
+
 ualpha-numeric-symbol14-space:  
-``
-[ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+= ]
-``  
+``[ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+= ]``
+
 ualpha-numeric-all:  
-``
-[ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/]
-``  
+``[ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/]``
+
 ualpha-numeric-all-space:  
-``
-[ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/ ]
-``  
+``[ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/ ]``
 
 lalpha:  
-``
-[abcdefghijklmnopqrstuvwxyz]
-``  
+``[abcdefghijklmnopqrstuvwxyz]``
+
 lalpha-space:  
-``
-[abcdefghijklmnopqrstuvwxyz ]
-``  
+``[abcdefghijklmnopqrstuvwxyz ]``
+
 lalpha-numeric:  
-``
-[abcdefghijklmnopqrstuvwxyz0123456789]
-``  
+``[abcdefghijklmnopqrstuvwxyz0123456789]``
+
 lalpha-numeric-space:  
-``
-[abcdefghijklmnopqrstuvwxyz0123456789 ]
-``  
+``[abcdefghijklmnopqrstuvwxyz0123456789 ]``
+
 lalpha-numeric-symbol14:  
-``
-[abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_+=]
-``  
+``[abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_+=]``
+
 lalpha-numeric-symbol14-space:  
-``
-[abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_+= ]
-``  
+``[abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_+= ]``
+
 lalpha-numeric-all:  
-``
-[abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/]
-``  
+``[abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/]``
+
 lalpha-numeric-all-space:  
-``
-[abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/ ]
-``  
+``[abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/ ]``
 
 mixalpha:  
-``
-[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ]
-``  
+``[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ]``
+
 mixalpha-space:  
-``
-[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ]
-``  
+``[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ ]``
+
 mixalpha-numeric:  
-``
-[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789]
-``  
+``[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789]``
+
 mixalpha-numeric-space:  
-``
-[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ]
-``  
+``[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ]``
+
 mixalpha-numeric-symbol14:  
-``
-[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=]
-``  
+``[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=]``
+
 mixalpha-numeric-symbol14-space:  
-``
-[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+= ]
-``  
+``[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+= ]``
+
 mixalpha-numeric-all:  
-``
-[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/]
-``  
+``[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/]``
+
 mixalpha-numeric-all-space:  
-``
-[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/ ]
-``  
+``[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/ ]``
 
 ## SWEDISH CHAR-SUPPORT
 
 ### Uppercase
+
 ualpha-sv:  
-``
-[ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ]
-``  
+``[ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ]``
+
 ualpha-space-sv:  
-``
-[ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ ]
-``  
+``[ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ ]``
+
 ualpha-numeric-sv:  
-``
-[ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789]
-``  
+``[ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789]``
+
 ualpha-numeric-space-sv:  
-``
-[ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789 ]
-``  
+``[ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789 ]``
+
 ualpha-numeric-symbol14-sv:  
-``
-[ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789!@#$%^&*()-_+=]
-``  
+``[ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789!@#$%^&*()-_+=]``
+
 ualpha-numeric-symbol14-space-sv:  
-``
-[ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789!@#$%^&*()-_+= ]
-``  
+``[ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789!@#$%^&*()-_+= ]``
+
 ualpha-numeric-all-sv:  
-``
-[ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/]
-``  
+``[ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/]``
+
 ualpha-numeric-all-space-sv:  
-``
-[ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/ ]
-``  
+``[ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/ ]``  
 
 ### Lowercase
+
 lalpha-sv:  
-``
-[abcdefghijklmnopqrstuvwxyzåäö]
-``  
+``[abcdefghijklmnopqrstuvwxyzåäö]``
+
 lalpha-space-sv:  
-``
-[abcdefghijklmnopqrstuvwxyzåäö ]
-``  
+``[abcdefghijklmnopqrstuvwxyzåäö ]``
+
 lalpha-numeric-sv:  
-``
-[abcdefghijklmnopqrstuvwxyzåäö0123456789]
-``  
+``[abcdefghijklmnopqrstuvwxyzåäö0123456789]``
+
 lalpha-numeric-space-sv:  
-``
-[abcdefghijklmnopqrstuvwxyzåäö0123456789 ]
-``  
+``[abcdefghijklmnopqrstuvwxyzåäö0123456789 ]``
+
 lalpha-numeric-symbol14-sv:  
-``
-[abcdefghijklmnopqrstuvwxyzåäö0123456789!@#$%^&*()-_+=]
-``  
+``[abcdefghijklmnopqrstuvwxyzåäö0123456789!@#$%^&*()-_+=]``
+
 lalpha-numeric-symbol14-space-sv:  
-``
-[abcdefghijklmnopqrstuvwxyzåäö0123456789!@#$%^&*()-_+= ]
-``  
+``[abcdefghijklmnopqrstuvwxyzåäö0123456789!@#$%^&*()-_+= ]``
+
 lalpha-numeric-all-sv:  
-``
-[abcdefghijklmnopqrstuvwxyzåäö0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/]
-``  
+``[abcdefghijklmnopqrstuvwxyzåäö0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/]``
+
 lalpha-numeric-all-space-sv:  
-``
-[abcdefghijklmnopqrstuvwxyzåäö0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/ ]
-``  
+``[abcdefghijklmnopqrstuvwxyzåäö0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/ ]``
 
 ### Mixcase
+
 mixalpha-sv:  
-``
-[abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ]
-``  
+``[abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ]``
+
 mixalpha-space-sv:  
-``
-[abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ ]
-``  
+``[abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ ]``
+
 mixalpha-numeric-sv:  
-``
-[abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789]
-``  
+``[abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789]``
+
 mixalpha-numeric-space-sv:  
-``
-[abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789 ]
-``  
+``[abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789 ]``
+
 mixalpha-numeric-symbol14-sv:  
-``
-[abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789!@#$%^&*()-_+=]
-``  
+``[abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789!@#$%^&*()-_+=]``
+
 mixalpha-numeric-symbol14-space-sv:  
-``
-[abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789!@#$%^&*()-_+= ]
-``  
+``[abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789!@#$%^&*()-_+= ]``
+
 mixalpha-numeric-all-sv:  
-``
-[abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/]
-``  
+``[abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/]``
+
 mixalpha-numeric-all-space-sv:  
-``
-[abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/ ]
-``  
+``[abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789!@#$%^&*()-_+=~`[]{}|\:;"'<>,.?/ ]``
 
 ## Crunch e outros aplicativos
 
-Crunch e aircrack-ng:  
+Crunch e aircrack-ng:
+
 ```bash
 crunch 2 4 abcdefghijklmnopqrstuvwxyz | aircrack-ng /root/Mycapfile.cap -e MyESSID -w-
 ```
 
-Crunch e airolib-ng:  
+Crunch e airolib-ng:
+
 ```bash
 crunch 10 10 12345 --stdout | airolib-ng testdb -import passwd -
 ```

@@ -7,5 +7,5 @@
 - The Hacker Playbook 2;
 - The Web Application Hacker's Handbook 2;
 
-https://novatec.com.br/
+<https://novatec.com.br/>
 Cupom de desconto: Desec

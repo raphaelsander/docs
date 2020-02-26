@@ -1,10 +1,14 @@
-### Comandos de Navegação
+# Cisco Comandos
+
+## Comandos de Navegação
+
 - Para voltar um nível: exit
 - Voltando ao nível raiz(Router#): end
 - Help dos comandos: ?
 - Desbloquear o terminal: CTRL+SHIFT+6
 
-### Comandos de Configuração
+## Comandos de Configuração
+
 Router>enable => Router# *Modo administrador.  
 Router#show running-config => *Exibe a configuração em execução.  
 Router#show startup-config => *Exibe a configuração de inicialização.  
@@ -27,7 +31,8 @@ Router(config)#router rip && version 2 && network 192.168.0.0 => Rota dinâmica 
 
 Router#copy running-config startup-config => *Copia as configurações em execução para a inicialização.  
 
-### DHCP
+## DHCP
+
 Router(config)#ip dhcp excluded-address 192.168.1.1 192.168.1.50  
 Router(config)#ip dhcp excluded-address 192.168.1.100  
 
@@ -37,7 +42,8 @@ Router(dhcp-config)#default-router 192.168.1.1
 Router(dhcp-config)#dns-server 198.0.0.2  
 Router(dhcp-config)#domain-name span.com (normalmente não usa)  
 
-### ENCAPSULATION
+## ENCAPSULATION
+
 Switch(config-if)#interface fa0/5  
 Switch(config-if)#switchport mode trunk  
 
@@ -53,9 +59,9 @@ Switch(config)#interface Fa0/3
 Switch(config-if)#switchport mode access  
 Switch(config-if)#switchport access vlan 10  
 
-### ACL
+## ACL
+
 Router(config)#access-list 1 deny 192.168.10.5 (para bloquear a rede 192.168.10.0/0.0.0.255)  
 Router(config)#access-list 1 permit any  
 Router(config)#interface Gig0/0  
 Router(config-if)#ip access-group 1 out  
-
