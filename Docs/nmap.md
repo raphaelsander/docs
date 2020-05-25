@@ -85,3 +85,11 @@ Podemos também executar todos os scripts possíveis do SMB:
 ```bash
 nmap -v --script=smb* 192.168.0.114
 ```
+
+## Enumeração de DNS
+
+Efetuando levantamento de subdomínios:
+
+```bash
+nmap 131.221.240.0/22 -sn | grep "inatel.br" | awk '{print $5}'
+```
