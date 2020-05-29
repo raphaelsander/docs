@@ -23,3 +23,18 @@ $1$t2gEU.Q/$vyBxDLNgISKrdezaIS3.7/
 **-O** ==> Para otimizar o hardware;  
 **-m500** ==> Tipo do hash [md5crypt, MD5 (Unix), Cisco-IOS $1$ (MD5)];  
 **-a0** ==> Tipo de ataque, utilizado quando fornece wordlist.
+
+---
+
+Força bruta em hash Linux:
+
+```bash
+hashcat -m1800 -a0 -o cracked.txt hash '/mnt/Dados/weakpass_2a' -O
+```
+
+```bash
+$ cat hash
+$6$LBh9do8.BDzrV0zM$vlP9JZJtfidW3RI3kredxhKXvBuRT4p/TU3B8qti7oiXCiW5p1ARj2zyCHGkIOoGG0vOTNr0JQqGtdObkwtRP1
+```
+
+**-m1800** ==> Tipo do hash [sha512crypt $6$, SHA512 (Unix)].
