@@ -26,7 +26,7 @@ $1$t2gEU.Q/$vyBxDLNgISKrdezaIS3.7/
 
 ---
 
-Força bruta em hash Linux:
+Força bruta em hash Linux sha512crypt:
 
 ```bash
 hashcat -m1800 -a0 -o cracked.txt hash '/mnt/Dados/weakpass_2a' -O
