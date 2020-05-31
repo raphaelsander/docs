@@ -38,3 +38,11 @@ $6$LBh9do8.BDzrV0zM$vlP9JZJtfidW3RI3kredxhKXvBuRT4p/TU3B8qti7oiXCiW5p1ARj2zyCHGk
 ```
 
 **-m1800** ==> Tipo do hash [sha512crypt $6$, SHA512 (Unix)].
+
+---
+
+**$1** = Algoritmo de hash MD5 (-m500).  
+**$2** = Algoritmo de hash Blowfish (-m3200).  
+**$2a** = Algoritmo de hash eksblowfish.  
+**$5** = Algoritmo de hash SHA-256 (-m1400).  
+**$6** = Algoritmo de hash SHA-512 (-m1800).
