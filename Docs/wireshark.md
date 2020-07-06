@@ -37,4 +37,5 @@ Filtros do exibição do Wireshark consulte:
 https://wiki.wireshark.org/DisplayFilters
 
 Filtros de captura do Wireshark consulte:  
-https://wiki.wireshark.org/CaptureFilters
+- https://wiki.wireshark.org/CaptureFilters
+- https://www.hackingarticles.in/nmap-scans-using-hex-value-flags/
