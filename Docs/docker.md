@@ -20,6 +20,16 @@ To create a simple container, use the below command and replace [IMAGE_NAME] wit
 docker create [IMAGE_NAME]
 ```
 
+*Você pode encontrar várias imagens em [Docker Hub](https://registry.hub.docker.com).*
+
+### Download de uma Imagem
+
+Você pode baixar a imagem de alguma aplicação diretamente através do seguinte comando:
+
+```bash
+docker pull mysql
+```
+
 ### Creating and Running a Container
 
 To create and run a container, use this command. As with before, replace [IMAGE_NAME] with the name of the image that you want to run. This command will search the Docker Hub for the image that you specified, download it, create a container and start that container.
@@ -27,6 +37,15 @@ To create and run a container, use this command. As with before, replace [IMAGE_
 ```bash
 docker run [IMAGE_NAME]
 ```
+
+ou
+
+```bash
+docker run [IMAGE_NAME] /bin/echo "Hello Docker!"
+```
+***/bin/echo** é o comando que será executado no docker ao iniciar.*  
+***"Hello Docker!"** é o argumento do comando echo.*
+
 
 ### Starting a Stopped Container
 
