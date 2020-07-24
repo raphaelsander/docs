@@ -18,6 +18,12 @@ showmount -e 192.168.0.100
 mount -t nfs 192.168.0.100:/ /mnt/nfs -o nolock
 ```
 
+ou
+
+```bash
+mount 192.168.0.100:/var /mnt/nfs
+```
+
 ```bash
 cd /mnt/nfs/
 ```

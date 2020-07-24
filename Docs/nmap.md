@@ -80,6 +80,12 @@ Enumeração de compartilhamento SMB:
 nmap -v --script=smb-enum-shares 192.168.0.114
 ```
 
+Enumeração de usuários e compartilhamentos:
+
+```bash
+nmap -p 445 --script=smb-enum-shares.nse,smb-enum-users.nse 10.10.216.122
+```
+
 Podemos também executar todos os scripts possíveis do SMB:
 
 ```bash
@@ -92,4 +98,12 @@ Efetuando levantamento de subdomínios:
 
 ```bash
 nmap 131.221.240.0/22 -sn | grep "inatel.br" | awk '{print $5}'
+```
+
+## Enumeração de NFS
+
+Efetuando a enumeração do NFS:
+
+```bash
+nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount 10.10.216.122
 ```

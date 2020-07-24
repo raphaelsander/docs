@@ -18,6 +18,10 @@ Procurando arquivo root com permissão de edição para escalonar permissão:
 find / -type f -perm 0777 2>/dev/null
 ```
 
+```bash
+find / -perm -u=s -type f 2>/dev/null
+```
+
 Procurar arquivo com permissão de determinado usuário:
 
 ```bash
