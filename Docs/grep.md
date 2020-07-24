@@ -17,6 +17,22 @@ grep "/bin/bash" /etc/passwd
 
 ---
 
+É possível efetuar a pesquisa em mais de um arquivo:
+
+```bash
+grep "pesquisa" file1 file2
+```
+
+---
+
+Para informar a linha da palavra pesquisada:
+
+```bash
+grep "pesquisa" file -n
+```
+
+---
+
 Para pesquisar uma string dentro de um arquivo e enviar para outro arquivo:
 
 ```bash
