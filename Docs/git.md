@@ -23,6 +23,18 @@ $ git config --local user.name "Seu nome aqui"
 $ git config --local user.email "seu@email.aqui"
 ```
 
+**--local** - Se você quer atribuir as configurações para o repositório em questão.
+**--global** - Se você deseja atribuir as configurações globalmente para todos os repositórios.
+
+A configuração local tem prioridade sobre a global.
+
+### Verificando configuração:
+
+```bash
+$ git config user.email
+$ git config user.name
+```
+
 ## Verificar status do repositório:
 
 Esse comando serve para verificar se há alguma alteração à ser salva ou algum arquivo que não está sendo versionado.
@@ -69,3 +81,23 @@ $ git rm [CAMINHO_ARQUIVO]
 ```bash
 $ git commit -m "Mensagem descritiva da alteração com convenção de somente uma linha"
 ```
+
+### Verificar histórico:
+
+```bash
+$ git log
+```
+
+*Modo simplificado de apenas uma linha:*
+
+```bash
+$ git log --oneline
+```
+
+*Modo completo com exibição das alterações:*
+
+```bash
+$ git log -p
+```
+
+Para mais opções acesse o site [DevHints](https://devhints.io/git-log)
