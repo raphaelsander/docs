@@ -16,6 +16,36 @@ Referência: <https://git-scm.com/book/pt-br/v2/Fundamentos-de-Git-Gravando-Alte
 $ git init
 ```
 
+### Clonar repositório remoto:
+
+```bash
+$ git clone [CAMINHO] [NOME_DA_PASTA]
+```
+
+**CAMINHO** - Caminho pode ser desde uma pasta compartilhada (local, vide "**Criar um server git local**") como uma URL ou conexão SSH.  
+**NOME_DA_PASTA** - Diretório onde o projeto vai ser clonado. Pode ser omitido e irá criar uma pasta com o nome do repositório remoto.
+
+### Criar um server git local:
+
+```bash
+$ git init --bare
+```
+
+### Adicionando repositório remoto:
+
+```bash
+$ git remote add [NOME_SIMBOLICO] [CAMINHO]
+```
+
+**NOME_SIMBOLICO** - Pode ser qualquer nome para identificar, por convenção normalmente é **origin**.  
+**CAMINHO** - Caminho pode ser desde uma pasta compartilhada (local, vide "**Criar um server git local**") como uma URL ou conexão SSH.
+
+### Verificando repositórios remotos adicionados:
+
+```bash
+$ git remote
+```
+
 ### Configurar email e nome:
 
 ```bash
@@ -23,7 +53,7 @@ $ git config --local user.name "Seu nome aqui"
 $ git config --local user.email "seu@email.aqui"
 ```
 
-**--local** - Se você quer atribuir as configurações para o repositório em questão.
+**--local** - Se você quer atribuir as configurações para o repositório em questão.  
 **--global** - Se você deseja atribuir as configurações globalmente para todos os repositórios.
 
 A configuração local tem prioridade sobre a global.
@@ -101,3 +131,18 @@ $ git log -p
 ```
 
 Para mais opções acesse o site [DevHints](https://devhints.io/git-log)
+
+### Baixar alterações do repositório remoto:
+
+```bash
+$ git pull
+$ git pull origin master
+```
+
+### Enviar alterações para o repositório remoto:
+
+```bash
+$ git push origin master
+```
+
+*Onde **origin** normalmente é o repositório remoto e **master** é o branch.*
