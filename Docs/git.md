@@ -8,6 +8,8 @@
 
 Referência: <https://git-scm.com/book/pt-br/v2/Fundamentos-de-Git-Gravando-Altera%C3%A7%C3%B5es-em-Seu-Reposit%C3%B3rio>
 
+Utilize o site <http://git-school.github.io/visualizing-git> para testar seus comandos Git.
+
 ---
 
 ### Iniciar repositório local:
@@ -146,3 +148,27 @@ $ git push origin master
 ```
 
 *Onde **origin** normalmente é o repositório remoto e **master** é o branch.*
+
+---
+
+## Branchs
+
+As branchs são bifurcações no códico com o intuito de organizar. Há vários modelos de organização de branchs e podem ser verificados pesquisando pelo termo **Git Flow** no Google.
+
+Criar uma nova ramificação:
+
+```bash
+$ git branch release_2.1
+```
+
+Criar uma nova ramificação e passar para ela:
+
+```bash
+$ git checkout -b release_2.1
+```
+
+Mudar para uma ramificação existente:
+
+```bash
+$ git checkout release_2.1
+```
