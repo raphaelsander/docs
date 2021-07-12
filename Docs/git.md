@@ -60,6 +60,12 @@ $ git config --local user.email "seu@email.aqui"
 
 A configuração local tem prioridade sobre a global.
 
+### Corrigindo email e/ou nome da última alteração:
+
+```bash
+$ git commit --amend --author="Nome Sobrenome <email@dominio.com>"
+```
+
 ### Verificando configuração:
 
 ```bash
