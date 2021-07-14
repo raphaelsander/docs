@@ -155,6 +155,12 @@ $ git push origin master
 
 *Onde **origin** normalmente é o repositório remoto e **master** é o branch.*
 
+Para servidores Gerrit o comando muda um pouquinho:
+
+```bash
+$ git push origin HEAD:refs/for/master
+```
+
 ---
 
 ## Branchs
