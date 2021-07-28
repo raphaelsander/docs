@@ -138,6 +138,12 @@ $ git log --oneline
 $ git log -p
 ```
 
+*Modo gráfico para facilitar a compreenção das ramificações:
+
+```bash
+$ git log --graph
+```
+
 Para mais opções acesse o site [DevHints](https://devhints.io/git-log)
 
 ### Baixar alterações do repositório remoto:
@@ -183,4 +189,18 @@ Mudar para uma ramificação existente:
 
 ```bash
 $ git checkout release_2.1
+```
+
+Efetuar o rebase:
+
+```bash
+$ git rebase release_2.1
+```
+
+Para isto, estando na **master**, queremos basear esta branch em **release_2.1**, assim, executaremos ``git rebase release_2.1``, e o Git pegará os commits na branch **release_2.1**, atualizando **master**, que possui todos os commits contidos em **release_2.1**, além do commit que havia nela mesma. Deste modo, geramos uma única linha, sem confusões.
+
+Efetuar o merge:
+
+```bash
+$ git merge release_2.1
 ```
