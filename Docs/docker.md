@@ -1,5 +1,8 @@
 # DOCKER
 
+## Livros e Documentações
+- <https://livro.descomplicandodocker.com.br/>
+
 ## Introduction
 
 If you’re trying to learn Docker you will first have to master its various terminal commands. This guide aims to help you get started with basic docker commands.
