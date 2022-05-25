@@ -39,7 +39,7 @@ tcpdump -vnr scanner.pcap udp
 Filtrando por protocolos TCP:
 
 ```bash
-tcpdump -vnr scanner.pcap tcpdump
+tcpdump -vnr scanner.pcap tcp
 ```
 
 Filtrando por IP:
