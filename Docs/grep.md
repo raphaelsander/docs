@@ -70,3 +70,11 @@ grep -v "nologin" /etc/passwd | grep -v "/bin/false"
 ```bash
 egrep -v "nologin|/bin/false"
 ```
+
+---
+
+Pesquisa recursiva:
+
+```bash
+grep -R "nologin"
+```
