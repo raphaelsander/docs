@@ -1,5 +1,20 @@
 # Ansible
 
+## Instalação
+
+### Ubuntu
+
+```bash
+sudo apt update
+sudo apt install software-properties-common
+sudo add-apt-repository --yes --update ppa:ansible/ansible
+sudo apt install ansible
+```
+
+Referência: <https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-ansible-on-ubuntu>
+
+## Comandos
+
 Hello World com Ansible:
 
 ```bash
