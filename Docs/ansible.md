@@ -15,6 +15,12 @@ Referência: <https://docs.ansible.com/ansible/latest/installation_guide/intro_i
 
 ## Comandos
 
+Verificar versão:
+
+```bash
+ansible --version
+```
+
 Hello World com Ansible:
 
 ```bash
