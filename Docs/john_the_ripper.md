@@ -29,3 +29,22 @@ Utilizando wordlist:
 ```bash
 john --wordlist=words.txt --rules --stdout > mutacao.txt
 ```
+
+## Quebra de GPG
+
+Vamos levar em consideração algum arquivo que foi criptografado com chava assimétrica, 
+primeiro precisamos converter o arquivo GPG para hash.
+
+Converter GPG para hash:
+
+```bash
+gpg2john lab1.gpg > hash
+```
+
+Iniciar a quebra do hash:
+
+```bash
+john --wordlist=rockyou.txt hash
+```
+
+Referência: <https://www.ubuntuvibes.com/2012/10/recover-your-gpg-passphrase-using-john.html>
