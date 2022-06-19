@@ -38,3 +38,9 @@ ansible -vvvv wordpress \
 ``-i hosts`` --> informamos o arquivo de inventário para ele conferir os hosts que configuraremos  
 ``-m shell`` --> informamos o módulo que executaremos: shell  
 ``-a 'echo Hello, World'`` --> quais os argumentos que estamos passando: echo Hello, World (comando que eu executaria direto no bash)
+
+Provisionamento simples passando arquivo de playbook:
+
+```bash
+ansible-playbook provisioning.yml -u vagrant -i hosts --private-key .vagrant/machines/wordpress/virtualbox/private_key
+```
