@@ -30,12 +30,12 @@ lab3.txt: openssl enc'd data with salted password
 └─$ bruteforce-salted-openssl -1 -d sha256 -c aes-256-cbc -f /usr/share/wordlists/rockyou.txt file.enc
 ```
 
-**-1** ==> Para o programa após achar a primeira possível senha.
-**-c** ==> Cifra
-**-f** ==> Wordlist
-**-d** ==> Digest
+**-1** ==> Para o programa após achar a primeira possível senha.  
+**-c** ==> Cifra  
+**-f** ==> Wordlist  
+**-d** ==> Digest  
 
-Script para fazer brute force, passando pelas várias cifras e disgests:
+Script para fazer brute force, passando pelas várias cifras e digests:
 
 ```bash
 #!/bin/bash
@@ -44,12 +44,12 @@ mkdir -p results
 
 for digest in $(cat digests.txt); do
     for cipher in $(cat ciphers.txt); do
-        echo "######### $cipher - $digest #########" >> results/$cipher_$digest.txt
-        bruteforce-salted-openssl -1 -d $digest -c $cipher -f /usr/share/wordlists/rockyou.txt lab3.txt &>> results/$cipher_$digest.txt
+        echo "######### $cipher - $digest #########" >> "results/$cipher - $digest.txt"
+        bruteforce-salted-openssl -1 -d $digest -c $cipher -f /usr/share/wordlists/rockyou.txt lab3.txt &>> "results/$cipher - $digest.txt"
+        
+    	grep -E '(#########|Password candidate:|Password not found.)' "results/$cipher - $digest.txt"
     done
-    echo "######### $cipher - $digest #########"
-    grep -E '(#########|Password candidate:|Password not found.)' results/$cipher_$digest.txt
 done
 
-grep -RE '(#########|Password candidate:)'
+grep -REh '(#########|Password candidate:)' results/
 ```
