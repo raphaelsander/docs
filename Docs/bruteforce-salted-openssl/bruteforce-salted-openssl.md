@@ -4,7 +4,7 @@ Esse programa permite o brute force em arquivos que foram encriptados pelo opens
 
 Instalação:
 
-```
+```terminal
 ┌──(bl4ckc47㉿kali)-[~]
 └─$ sudo apt install bruteforce-salted-openssl
 ```
@@ -13,7 +13,7 @@ Uso básico:
 
 Exemplo:
 
-```
+```terminal
 ┌──(bl4ckc47㉿kali)-[~]
 └─$ cat lab3.txt.enc
 U2FsdGVkX19mmFpHlaahBa+bNAf9QncLX7YUxfBuC8xqsV4g1aYYy+j05lOSHmYM
@@ -47,9 +47,17 @@ for digest in $(cat digests.txt); do
         echo "######### $cipher - $digest #########" >> "results/$cipher - $digest.txt"
         bruteforce-salted-openssl -1 -d $digest -c $cipher -f /usr/share/wordlists/rockyou.txt lab3.txt &>> "results/$cipher - $digest.txt"
         
-    	grep -E '(#########|Password candidate:|Password not found.)' "results/$cipher - $digest.txt"
+        grep -E '(#########|Password candidate:|Password not found.)' "results/$cipher - $digest.txt"
     done
 done
 
 grep -REh '(#########|Password candidate:)' results/
 ```
+
+## Wordlists
+
+Cifras OpenSSL: [ciphers.txt](ciphers.txt)  
+Cifras OpenSSL Unsafe: [old_ciphers.txt](old_ciphers.txt)  
+Digests: [digests.txt](digests.txt)
+
+Referência: <https://myexperiments.io/finding-cipher-algorithm-encrypted-file.html>
