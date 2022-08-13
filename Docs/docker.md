@@ -1,6 +1,7 @@
 # DOCKER
 
 ## Livros e Documentações
+
 - <https://livro.descomplicandodocker.com.br/>
 
 ## Introduction
@@ -46,9 +47,9 @@ ou
 ```bash
 docker run [IMAGE_NAME] /bin/echo "Hello Docker!"
 ```
+
 ***/bin/echo** é o comando que será executado no docker ao iniciar.*  
 ***"Hello Docker!"** é o argumento do comando echo.*
-
 
 ### Starting a Stopped Container
 
@@ -143,6 +144,7 @@ docker image pull [IMAGE_NAME]
 ```
 
 ### Pushing an Image to the Docker Hub
+
 Before you push a container image to the docker hub, you must create an account at the docker hub and login from your terminal. Once you have your account ready, run the following command in your terminal:
 
 ```bash
