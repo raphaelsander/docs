@@ -1,11 +1,11 @@
+# YAML
+
 ## Links
 
--   [YAML 1.2 Spec](http://www.yaml.org/spec/1.2/spec.html)
--   [Online YAML Linter (Ruby)](http://www.yamllint.com/)
--   [Online YAML Parser
-    (Python)](http://yaml-online-parser.appspot.com/)
--   [kwalify - YAML schema validator
-    (Ruby)](http://www.kuwata-lab.com/kwalify/)
+- [YAML 1.2 Spec](http://www.yaml.org/spec/1.2/spec.html)
+- [Online YAML Linter (Ruby)](http://www.yamllint.com/)
+- [Online YAML Parser (Python)](http://yaml-online-parser.appspot.com/)
+- [kwalify - YAML schema validator (Ruby)](http://www.kuwata-lab.com/kwalify/)
 
 ## YAML Syntax Examples
 
@@ -20,7 +20,7 @@ Scalar types
     b: abc                     
     c: false    # boolean type 
     d: 2015-04-05   # date type
-                                 
+
 Enforcing strings
 
     b: !str 2015-04-05
@@ -39,7 +39,7 @@ Enforcing strings
      my_list_of_lists:
        - [1, 2, 3]
        - [4, 5, 6]
-       
+
 ### YAML Hashes
 
 Nested hash
@@ -50,11 +50,11 @@ Nested hash
          subsubkey2: 6
        another:
          somethingelse: 'Important!'
-         
+
 Hash with JSON syntax (mixing is possible)
 
      my_hash: {nr1: 5, nr2: 6}
-     
+
 ### YAML HereDoc (multiline strings)
 
 _Block notation_: Newlines become spaces
@@ -70,13 +70,12 @@ _Literal style_: Newlines are preserved
        Arbitrary free text            
        over "multiple lines" stopping 
        after indentation changes...   
-                                      
+
 _+ indicator_: Keep extra newlines after the block
 
     content: |+                      
        Arbitrary free text with newlines after
-       
-    
+
 _- indicator_: remove extra newlines after block
 
     content: |-
@@ -91,14 +90,13 @@ _folded style_: folded newlines are preserved
 
 Note that YAML heredocs are the way to escape special characters:
 
-
      code: 
         url: "https://example.com"        # sub key "url" with value 'https://...'
 
      code: |-                             # versus key "code" having value 'url: "https://..."'
         url: "https://example.com"
 
-There is a good online previewer for the different heredoc modes: https://yaml-multiline.info/
+There is a good online previewer for the different heredoc modes: <https://yaml-multiline.info/>
 
 ### Multiple Documents
 
@@ -117,7 +115,7 @@ This also means YAML parsers might return multiple documents!
      values:
        - &ref Something to reuse
        - *ref      # Literal "Something to reuse" is inserted here!
-       
+
 ### Merging Keys
 
 Imagine some default properties for a hash like these
@@ -140,7 +138,6 @@ Use them in another hash using "<<: *reference"
          owner: my_user
          group: my_group
 
-
 ### Complex Mapping
 
      ---                              
@@ -149,6 +146,3 @@ Use them in another hash using "<<: *reference"
        - value                        
 
 Note: key and value can be multiple, complex structures that you could not realize with the hash syntax!
-
-
-
