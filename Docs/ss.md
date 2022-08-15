@@ -98,6 +98,7 @@ ss -o state fin-wait-1
 ```
 
 Opções de filtro:
+
 - established
 - syn-sent
 - syn-recv
