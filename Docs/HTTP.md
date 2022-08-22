@@ -2,29 +2,32 @@
 
 Via NC podemos analisar melhor o que acontece em uma requisição HTTP.
 
-```
-nc -v site.com 80  
+```bash
+nc -v site.com 80
 GET / HTTP/1.0
 ```
 
-O retorno será paracido com:  
-```
-HTTP/1.1 200 OK  
-...  
-...  
-Server: Apache/2.2.22 (Debian)  
-...  
-...  
-Código da página normalmente em HTML  
-```  
+O retorno será paracido com:
 
-Para retornar apenas o HEAD:  
+```http
+HTTP/1.1 200 OK  
+...
+...
+Server: Apache/2.2.22 (Debian)
+...
+...
+Código da página normalmente em HTML
 ```
-nc -v site.com 80  
+
+Para retornar apenas o HEAD:
+
+```bash
+nc -v site.com 80
 HEAD / HTTP/1.0
 ```  
 
-### Lista de erros:  
+## Lista de erros
+
 100 Continue  
 101 Switching Protocols  
 103 Early Hints  
@@ -76,7 +79,8 @@ HEAD / HTTP/1.0
 505 HTTP Version Not Supported  
 511 Network Authentication Required  
 
-#### Exemplos:  
+### Exemplos
+
 200 OK  
 302 Moved Temporarily  
 404 Not Found  
