@@ -30,6 +30,8 @@
 **-T4** = scan rápido  
 **-T5** = scan muito rápido e barulhento  
 
+Referência: <https://nmap.org/book/performance-timing-templates.html>
+
 ---
 
 ### Exemplos
