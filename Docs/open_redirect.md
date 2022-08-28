@@ -15,7 +15,7 @@ Instalação das dependências:
 
 ```bash
 go install github.com/tomnomnom/qsreplace@latest
-mv ~/go/bin/qsreplace /usr/bin/
+sudo mv ~/go/bin/qsreplace /usr/bin/
 ```
 
 No lugar do endereço "http://evil.com" podemos também utilizar serviços de webhook, onde devemos ver a requisição chegando:
