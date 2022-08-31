@@ -204,3 +204,7 @@ Efetuar o merge:
 ```bash
 $ git merge release_2.1
 ```
+
+### Editando Commits Antigos
+
+<https://linuxize.com/post/change-git-commit-message/#:~:text=To%20change%20the%20most%20recent%20commit%20message%2C%20use%20the%20git,of%20problems%20to%20your%20colleagues.>
