@@ -1,27 +1,19 @@
 # StdErr e StdOut
 
-```
-          || visible in terminal ||   visible in file   || existing
-  Syntax  ||  StdOut  |  StdErr  ||  StdOut  |  StdErr  ||   file
-==========++==========+==========++==========+==========++===========
-    >     ||    no    |   yes    ||   yes    |    no    || overwrite
-    >>    ||    no    |   yes    ||   yes    |    no    ||  append
-          ||          |          ||          |          ||
-   2>     ||   yes    |    no    ||    no    |   yes    || overwrite
-   2>>    ||   yes    |    no    ||    no    |   yes    ||  append
-          ||          |          ||          |          ||
-   &>     ||    no    |    no    ||   yes    |   yes    || overwrite
-   &>>    ||    no    |    no    ||   yes    |   yes    ||  append
-          ||          |          ||          |          ||
- | tee    ||   yes    |   yes    ||   yes    |    no    || overwrite
- | tee -a ||   yes    |   yes    ||   yes    |    no    ||  append
-          ||          |          ||          |          ||
- n.e. (*) ||   yes    |   yes    ||    no    |   yes    || overwrite
- n.e. (*) ||   yes    |   yes    ||    no    |   yes    ||  append
-          ||          |          ||          |          ||
-|& tee    ||   yes    |   yes    ||   yes    |   yes    || overwrite
-|& tee -a ||   yes    |   yes    ||   yes    |   yes    ||  append
-```
+| Sintaxe        | StdOut p/ Terminal | StdErr p/ Terminal | StdOut p/ Arquivo | StdErr p/ Arquivo | Arquivo    |
+| -------------- | ------------------ | ------------------ | ----------------- | ----------------- | ---------- |
+| ``>``          | não                | sim                | sim               | não               | substitui  |
+| ``>>``         | não                | sim                | sim               | não               | incrementa |
+| ``2>``         | sim                | não                | não               | sim               | substitui  |
+| ``2>>``        | sim                | não                | não               | sim               | incrementa |
+| ``&>``         | não                | não                | sim               | sim               | substitui  |
+| ``&>>``        | não                | não                | sim               | sim               | incrementa |
+| ``\| tee``     | sim                | sim                | sim               | não               | substitui  |
+| ``\| tee -a``  | sim                | sim                | sim               | não               | incrementa |
+| n.e. (*)       | sim                | sim                | não               | sim               | substitui  |
+| n.e. (*)       | sim                | sim                | não               | sim               | incrementa |
+| ``\|& tee``    | sim                | sim                | sim               | sim               | substitui  |
+| ``\|& tee -a`` | sim                | sim                | sim               | sim               | incrementa |
 
 ## List
 
