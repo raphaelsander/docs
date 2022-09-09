@@ -10,53 +10,93 @@
 | ``&>>``        | não                | não                | sim               | sim               | incrementa |
 | ``\| tee``     | sim                | sim                | sim               | não               | substitui  |
 | ``\| tee -a``  | sim                | sim                | sim               | não               | incrementa |
-| n.e. (*)       | sim                | sim                | não               | sim               | substitui  |
-| n.e. (*)       | sim                | sim                | não               | sim               | incrementa |
+| N/A            | sim                | sim                | não               | sim               | substitui  |
+| N/A            | sim                | sim                | não               | sim               | incrementa |
 | ``\|& tee``    | sim                | sim                | sim               | sim               | substitui  |
 | ``\|& tee -a`` | sim                | sim                | sim               | sim               | incrementa |
 
-## List
+## Exemplos
 
+```bash
 command > output.txt
+```
 
-The standard output stream will be redirected to the file only, it will not be visible in the terminal. If the file already exists, it gets overwritten.
+O fluxo de saída padrão será redirecionado apenas para o arquivo, não será visível no terminal. Se o arquivo já existir, ele será substituído.
 
+---
+
+```bash
 command >> output.txt
+```
 
-The standard output stream will be redirected to the file only, it will not be visible in the terminal. If the file already exists, the new data will get appended to the end of the file.
+O fluxo de saída padrão será redirecionado apenas para o arquivo, não será visível no terminal. Se o arquivo já existir, os novos dados serão anexados ao final do arquivo.
 
+---
+
+```bash
 command 2> output.txt
+```
 
-The standard error stream will be redirected to the file only, it will not be visible in the terminal. If the file already exists, it gets overwritten.
+O fluxo de erro padrão será redirecionado apenas para o arquivo, não será visível no terminal. Se o arquivo já existir, ele será substituído.
 
+---
+
+```bash
 command 2>> output.txt
+```
 
-The standard error stream will be redirected to the file only, it will not be visible in the terminal. If the file already exists, the new data will get appended to the end of the file.
+O fluxo de erro padrão será redirecionado apenas para o arquivo, não será visível no terminal. Se o arquivo já existir, os novos dados serão anexados ao final do arquivo.
 
+---
+
+```bash
 command &> output.txt
+```
 
-Both the standard output and standard error stream will be redirected to the file only, nothing will be visible in the terminal. If the file already exists, it gets overwritten.
+Tanto a saída padrão quanto o fluxo de erro padrão serão redirecionados apenas para o arquivo, nada será visível no terminal. Se o arquivo já existir, ele será substituído.
 
+---
+
+```bash
 command &>> output.txt
+```
 
-Both the standard output and standard error stream will be redirected to the file only, nothing will be visible in the terminal. If the file already exists, the new data will get appended to the end of the file..
+Tanto a saída padrão quanto o fluxo de erro padrão serão redirecionados apenas para o arquivo, nada será visível no terminal. Se o arquivo já existir, os novos dados serão anexados ao final do arquivo.
 
+---
+
+```bash
 command | tee output.txt
+```
 
-The standard output stream will be copied to the file, it will still be visible in the terminal. If the file already exists, it gets overwritten.
+O fluxo de saída padrão será copiado para o arquivo, ele ainda estará visível no terminal. Se o arquivo já existir, ele será substituído.
 
+---
+
+```bash
 command | tee -a output.txt
+```
 
-The standard output stream will be copied to the file, it will still be visible in the terminal. If the file already exists, the new data will get appended to the end of the file.
+O fluxo de saída padrão será copiado para o arquivo, ele ainda estará visível no terminal. Se o arquivo já existir, os novos dados serão anexados ao final do arquivo.
 
-(*)
+---
 
-Bash has no shorthand syntax that allows piping only StdErr to a second command, which would be needed here in combination with tee again to complete the table. If you really need something like that, please look at "How to pipe stderr, and not stdout?" on Stack Overflow for some ways how this can be done e.g. by swapping streams or using process substitution.
+### N/A
 
+O Bash não tem sintaxe abreviada que permite canalizar apenas StdErr para um segundo comando, que seria necessário aqui em combinação com tee novamente para completar a tabela. Se você realmente precisa de algo assim, veja "How to pipe stderr, and not stdout?" no Stack Overflow para algumas maneiras de como isso pode ser feito, por exemplo trocando fluxos ou usando substituição de processo.
+
+---
+
+```bash
 command |& tee output.txt
+```
 
-Both the standard output and standard error streams will be copied to the file while still being visible in the terminal. If the file already exists, it gets overwritten.
+Tanto a saída padrão quanto os fluxos de erro padrão serão copiados para o arquivo enquanto ainda estiverem visíveis no terminal. Se o arquivo já existir, ele será substituído.
 
+---
+
+```bash
 command |& tee -a output.txt
+```
 
-Both the standard output and standard error streams will be copied to the file while still being visible in the terminal. If the file already exists, the new data will get appended to the end of the file.
+Tanto a saída padrão quanto os fluxos de erro padrão serão copiados para o arquivo enquanto ainda estiverem visíveis no terminal. Se o arquivo já existir, os novos dados serão anexados ao final do arquivo.
