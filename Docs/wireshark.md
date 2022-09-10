@@ -31,11 +31,13 @@ Pesquisa por string na URL de requisições HTTP:
 Pesquisa por conexões SYN ACK:  
 ``tcp.flags==0x12``  
 ``tcp.flags.syn==1 && tcp.flags.ack==1``  
-*Normalmente utilizado para analisar capturas de portscan.* 
+*Normalmente utilizado para analisar capturas de portscan.*
 
-Filtros do exibição do Wireshark consulte:  
-https://wiki.wireshark.org/DisplayFilters
+Filtros do exibição do Wireshark consulte:
 
-Filtros de captura do Wireshark consulte:  
-- https://wiki.wireshark.org/CaptureFilters
-- https://www.hackingarticles.in/nmap-scans-using-hex-value-flags/
+- <https://wiki.wireshark.org/DisplayFilters>
+
+Filtros de captura do Wireshark consulte:
+
+- <https://wiki.wireshark.org/CaptureFilters>
+- <https://www.hackingarticles.in/nmap-scans-using-hex-value-flags/>
