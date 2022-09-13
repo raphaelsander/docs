@@ -22,6 +22,9 @@ EOF
 
 Sobre bots no Telegram: <https://core.telegram.org/bots#3-how-do-i-create-a-bot>
 
+Pegando Chat ID:  
+``https://api.telegram.org/bot<BOT_HTTP_API_TOKEN>/getUpdates``
+
 Editando a crontab:
 
 ```bash
