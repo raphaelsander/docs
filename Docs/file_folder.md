@@ -1,48 +1,103 @@
-# Arquivos  
-Criar arquivo:  
-``touch nomedoarquivo.txt``
+# Arquivos e Pastas
 
-Remover arquivo:  
-``rm nomedoarquivo.txt``
+## Arquivos
 
-Remover um arquivo de forma forçada:  
-``rm -f nomedoarquivo.txt``
+Criar arquivo:
 
-Para localizar um arquivo ou pasta:  
-``locate "nomedoarquivo"``
+```bash
+touch nomedoarquivo.txt
+```
 
-Exibir arquivo:  
-``cat nomedoarquivo.txt``  
-``more nomedoarquivo.txt``  
-``less nomedoarquivo.txt``  
+Remover arquivo:
 
-Exibir arquivo de traz para frente:  
-``tac nomedoarquivo.txt``
+```bash
+rm nomedoarquivo.txt
+```
 
-Exibir um número limitado de linhas em um arquivo:  
-``head -n 2`` Será exibido apenas as duas primeiras linhas.
+Remover um arquivo de forma forçada:
 
-Exinir um número limitado de linhas no final de um arquivo:  
-``tail -n 2`` Será exibido apenas as duas últimas linhas.
+```bash
+rm -f nomedoarquivo.txt
+```
 
-Exibir um arquivo em tempo real:  
-``tail -f /var/log/apache2/access.log`` Muito utilizado para arquivos de log.
+Para localizar um arquivo ou pasta:
 
-# Pastas  
-Verificar diretório atual:  
-``pwd``
+```bash
+locate "nomedoarquivo"
+```
 
-Listar pastas e arquivos do diretório:  
-``ls``
+Exibir arquivo:
 
-Listar pastas e arquivos inclusive ocultos do diretório:  
-``ls -a``
+```bash
+cat nomedoarquivo.txt
+more nomedoarquivo.txt
+less nomedoarquivo.txt
+```
 
-Listar pastas e arquivos inclusive ocultos do diretório com todas as informações:  
-``ls -la``
+Exibir arquivo de traz para frente:
 
-Remover uma pasta de arquivos:  
-``rm -R nomedapasta``
+```bash
+tac nomedoarquivo.txt
+```
 
-Criar diretório:  
-``mkdir nomedapasta``
+Exibir um número limitado de linhas em um arquivo:
+
+```bash
+head -n 2
+```
+
+*Será exibido apenas as duas primeiras linhas.*
+
+Exinir um número limitado de linhas no final de um arquivo:
+
+```bash
+tail -n 2
+```
+
+*Será exibido apenas as duas últimas linhas.*
+
+Exibir um arquivo em tempo real:
+
+```bash
+tail -f /var/log/apache2/access.log
+```
+
+*Muito utilizado para arquivos de log.*
+
+## Pastas
+
+Verificar diretório atual:
+
+```bash
+pwd
+```
+
+Listar pastas e arquivos do diretório:
+
+```bash
+ls
+```
+
+Listar pastas e arquivos inclusive ocultos do diretório:
+
+```bash
+ls -a
+```
+
+Listar pastas e arquivos inclusive ocultos do diretório com todas as informações:
+
+```bash
+ls -la
+```
+
+Remover uma pasta de arquivos:
+
+```bash
+rm -R nomedapasta
+```
+
+Criar diretório:
+
+```bash
+mkdir nomedapasta
+```
