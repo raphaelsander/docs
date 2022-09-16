@@ -12,47 +12,47 @@ Utilize o site <http://git-school.github.io/visualizing-git> para testar seus co
 
 ---
 
-### Iniciar repositório local:
+## Iniciar repositório local
 
 ```bash
-$ git init
+git init
 ```
 
-### Clonar repositório remoto:
+## Clonar repositório remoto
 
 ```bash
-$ git clone [CAMINHO] [NOME_DA_PASTA]
+git clone [CAMINHO] [NOME_DA_PASTA]
 ```
 
 **CAMINHO** - Caminho pode ser desde uma pasta compartilhada (local, vide "**Criar um server git local**") como uma URL ou conexão SSH.  
 **NOME_DA_PASTA** - Diretório onde o projeto vai ser clonado. Pode ser omitido e irá criar uma pasta com o nome do repositório remoto.
 
-### Criar um server git local:
+## Criar um server git local
 
 ```bash
-$ git init --bare
+git init --bare
 ```
 
-### Adicionando repositório remoto:
+## Adicionando repositório remoto
 
 ```bash
-$ git remote add [NOME_SIMBOLICO] [CAMINHO]
+git remote add [NOME_SIMBOLICO] [CAMINHO]
 ```
 
 **NOME_SIMBOLICO** - Pode ser qualquer nome para identificar, por convenção normalmente é **origin**.  
 **CAMINHO** - Caminho pode ser desde uma pasta compartilhada (local, vide "**Criar um server git local**") como uma URL ou conexão SSH.
 
-### Verificando repositórios remotos adicionados:
+## Verificando repositórios remotos adicionados
 
 ```bash
-$ git remote
+git remote
 ```
 
-### Configurar email e nome:
+## Configurar email e nome
 
 ```bash
-$ git config --local user.name "Seu nome aqui"
-$ git config --local user.email "seu@email.aqui"
+git config --local user.name "Seu nome aqui"
+git config --local user.email "seu@email.aqui"
 ```
 
 **--local** - Se você quer atribuir as configurações para o repositório em questão.  
@@ -60,25 +60,25 @@ $ git config --local user.email "seu@email.aqui"
 
 A configuração local tem prioridade sobre a global.
 
-### Corrigindo email e/ou nome da última alteração:
+## Corrigindo email e/ou nome da última alteração
 
 ```bash
-$ git commit --amend --author="Nome Sobrenome <email@dominio.com>"
+git commit --amend --author="Nome Sobrenome <email@dominio.com>"
 ```
 
-### Verificando configuração:
+## Verificando configuração
 
 ```bash
-$ git config user.email
-$ git config user.name
+git config user.email
+git config user.name
 ```
 
-## Verificar status do repositório:
+## Verificar status do repositório
 
 Esse comando serve para verificar se há alguma alteração à ser salva ou algum arquivo que não está sendo versionado.
 
 ```bash
-$ git status
+git status
 ```
 
 ```bash
@@ -94,69 +94,69 @@ M  lib/simplegit.rb (Modificado)
 
 *Modo curto
 
-### Adicionar arquivos para serem versionados:
+## Adicionar arquivos para serem versionados
 
 ```bash
-$ git add [CAMINHO_ARQUIVO]
+git add [CAMINHO_ARQUIVO]
 ```
 
 ou
 
 ```bash
-$ git add .
+git add .
 ```
 
 *Para adicionar todos os arquivos não versionados naquele diretório.*
 
-### Remover arquivos do versionamento:
+## Remover arquivos do versionamento
 
 ```bash
-$ git rm [CAMINHO_ARQUIVO]
+git rm [CAMINHO_ARQUIVO]
 ```
 
-### Salvar uma alteração:
+## Salvar uma alteração
 
 ```bash
-$ git commit -m "Mensagem descritiva da alteração com convenção de somente uma linha"
+git commit -m "Mensagem descritiva da alteração com convenção de somente uma linha"
 ```
 
-### Verificar histórico:
+## Verificar histórico
 
 ```bash
-$ git log
+git log
 ```
 
 *Modo simplificado de apenas uma linha:*
 
 ```bash
-$ git log --oneline
+git log --oneline
 ```
 
 *Modo completo com exibição das alterações:*
 
 ```bash
-$ git log -p
+git log -p
 ```
 
 *Modo gráfico para facilitar a compreenção das ramificações:
 
 ```bash
-$ git log --graph
+git log --graph
 ```
 
 Para mais opções acesse o site [DevHints](https://devhints.io/git-log)
 
-### Baixar alterações do repositório remoto:
+## Baixar alterações do repositório remoto
 
 ```bash
-$ git pull
-$ git pull origin master
+git pull
+git pull origin master
 ```
 
-### Enviar alterações para o repositório remoto:
+## Enviar alterações para o repositório remoto
 
 ```bash
-$ git push origin master
+git push origin master
 ```
 
 *Onde **origin** normalmente é o repositório remoto e **master** é o branch.*
@@ -164,7 +164,7 @@ $ git push origin master
 Para servidores Gerrit o comando muda um pouquinho:
 
 ```bash
-$ git push origin HEAD:refs/for/master
+git push origin HEAD:refs/for/master
 ```
 
 ---
@@ -176,25 +176,25 @@ As branchs são bifurcações no códico com o intuito de organizar. Há vários
 Criar uma nova ramificação:
 
 ```bash
-$ git branch release_2.1
+git branch release_2.1
 ```
 
 Criar uma nova ramificação e passar para ela:
 
 ```bash
-$ git checkout -b release_2.1
+git checkout -b release_2.1
 ```
 
 Mudar para uma ramificação existente:
 
 ```bash
-$ git checkout release_2.1
+git checkout release_2.1
 ```
 
 Efetuar o rebase:
 
 ```bash
-$ git rebase release_2.1
+git rebase release_2.1
 ```
 
 Para isto, estando na **master**, queremos basear esta branch em **release_2.1**, assim, executaremos ``git rebase release_2.1``, e o Git pegará os commits na branch **release_2.1**, atualizando **master**, que possui todos os commits contidos em **release_2.1**, além do commit que havia nela mesma. Deste modo, geramos uma única linha, sem confusões.
@@ -202,9 +202,9 @@ Para isto, estando na **master**, queremos basear esta branch em **release_2.1**
 Efetuar o merge:
 
 ```bash
-$ git merge release_2.1
+git merge release_2.1
 ```
 
-### Editando Commits Antigos
+## Editando Commits Antigos
 
 <https://linuxize.com/post/change-git-commit-message/#:~:text=To%20change%20the%20most%20recent%20commit%20message%2C%20use%20the%20git,of%20problems%20to%20your%20colleagues.>
