@@ -9,6 +9,15 @@ LOCAL ==>> Conectar no alvo via SSH.
 
 ---
 
+## Permissão dos Arquivos e Diretórios
+
+**~/.ssh** ==>> 700 (drwx------)
+**id_rsa.pub** ==>> 644 (-rw-r--r--)
+**id_rsa** ==>> 600 (-rw-------)
+**authorized_keys** ==>> 600 (-rw-------)
+
+---
+
 ## 1- Local
 
 ```bash
