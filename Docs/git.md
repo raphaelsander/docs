@@ -114,6 +114,28 @@ git add .
 git rm [CAMINHO_ARQUIVO]
 ```
 
+## Arquivos ou diretórios para serem ignorados
+
+Em alguns casos, não queremos que alguns arquivos ou diretórios sejam versionados, como por exemplo, caches, arquivos de variáveis de ambiente, pastas temporárias, entre outros. Para isso o **git** tem uma solução que é a criação do arquivo **.gitignore** dentro do diretório raiz do projeto.
+
+A sintaxe desse arquivo é bem simples e pode ser acompanhada abaixo:
+
+```bash
+$ cat .gitignore
+# Este é um comentário.
+build/ # Nesse caso o diretório build e todos os arquivos abaixo dele serão ignorados.
+.env # Nesse caso o arquivo ".env" será ignorado.
+*.log # Nesse caso todos os arquivos que tiverem a extensão ".log" serão ignorados.
+**/__pycache__/ # Nesse caso, qualquer diretório "__pycache__" no projeto será ignorado, independente do diretório pai.
+**/test/__pycache__/ ## Mesmo caso do exemplo acima, porém o diretório "__pycache__" precisa ter como pai o diretório "test".
+```
+
+Mais exemplos podem ser encontrados na [documentação oficial](https://git-scm.com/docs/gitignore).
+
+Caso você não tem ideia de quais arquivos ou diretórios adicionar ao seu .gitignore, talvez esse site possa lhe ajudar. Você só precisa ir adicionando as tecnologias que um arquivo .gitignore será gerado.
+
+<https://www.toptal.com/developers/gitignore>
+
 ## Salvar uma alteração
 
 ```bash
