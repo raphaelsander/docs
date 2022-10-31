@@ -1,14 +1,16 @@
-# DOCKER
+# Docker
 
 ## Livros e Documentações
 
 - <https://livro.descomplicandodocker.com.br/>
 
-## Introduction
+## Introdução
 
-If you’re trying to learn Docker you will first have to master its various terminal commands. This guide aims to help you get started with basic docker commands.
+Se você está tentando aprender o Docker, primeiro terá que dominar seus vários comandos de terminal. Este guia tem como objetivo ajudá-lo a começar com os comandos básicos do Docker.
 
-This tutorial assumes that you already have Docker installed on your system. If not, you can start here to learn how to quickly install Docker. Select a topic from the table of contents below.
+Este tutorial pressupõe que você já tenha o Docker instalado em seu sistema. Caso contrário, você pode começar pelo link abaixo para aprender como instalar rapidamente o Docker. Recomendamos a instalação do Docker no sistema operacional Linux para melhor aproveitamento dos recursos.
+
+<https://docs.docker.com/engine/install/>
 
 ---
 
