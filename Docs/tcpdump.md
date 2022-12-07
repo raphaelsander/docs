@@ -66,6 +66,12 @@ Filtrando por porta:
 tcpdump -vnr scanner.pcap port 21
 ```
 
+Filtrando por portas:
+
+```bash
+tcpdump -i any 'port 80 or 8080' -w captura.pcap
+```
+
 Visualiza os caracteres em ASCII nos pacotes:
 
 ```bash
