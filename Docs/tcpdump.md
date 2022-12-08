@@ -122,3 +122,7 @@ Filtrando de forma tratada o IP de origem e as conexões finalizadas:
 ```bash
 tcpdump -vnr scanner.pcap src host 192.168.0.200 | cut -d "," -f1 | grep -v "tos" | grep -v "[S]" | grep "F\."
 ```
+
+Referências:
+
+- <https://danielmiessler.com/study/tcpdump/>
