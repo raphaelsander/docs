@@ -72,6 +72,13 @@ Filtrando por portas:
 tcpdump -i any 'port 80 or 8080' -w captura.pcap
 ```
 
+Filtrando e escrevendo em um novo arquivo:
+
+```bash
+# tcpdump -r <arquivo_leitura> -w <arquivo_escrita> '<filtro>'
+tcpdump -r full_snifer.pcap -w filtered.pcap '(host 192.168.0.200 and 192.168.0.1) and port 80'
+```
+
 Visualiza os caracteres em ASCII nos pacotes:
 
 ```bash
