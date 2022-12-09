@@ -44,3 +44,14 @@ Para mais opções no listar os nodes:
 ```bash
 kubectl get nodes --help
 ```
+
+## Log
+
+Checando os logs de determinado POD quando possui apenas um container (1/1):
+
+```bash
+# kubectl -n <NAMESPACE> logs <POD>
+kubectl -n web logs nginx
+```
+
+*Lembrando que esse comando irá exibir os logs do início ao fim, ocorrendo casos em que o log possui muitas linhas, talvez o terminal não tenha suporte, fazendo se necessário enviar os logs pra algum arquivo para que possa ser analisado depois.*
