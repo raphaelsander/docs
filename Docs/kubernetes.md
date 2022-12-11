@@ -55,3 +55,10 @@ kubectl -n web logs nginx
 ```
 
 *Lembrando que esse comando irá exibir os logs do início ao fim, ocorrendo casos em que o log possui muitas linhas, talvez o terminal não tenha suporte, fazendo se necessário enviar os logs pra algum arquivo para que possa ser analisado depois.*
+
+Checando os logs de determinado POD quando possui mais de um container (n/n):
+
+```bash
+# kubectl -n <NAMESPACE> logs <POD> -c <CONTAINER>
+kubectl -n web logs nginx -c fluentbit
+```
