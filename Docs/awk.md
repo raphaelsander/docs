@@ -21,3 +21,12 @@ Formatando a saída:
 ```bash
 awk -F : '{print "Usuario:"$1 " - Diretorio:"$6}' /etc/passwd
 ```
+
+Passando variáveis ou variáveis de ambiente para o awk:
+
+```bash
+for x in *iperf.log; do
+    y=$(echo $x | cut -d"_" -f1)
+    cat $x | grep receiver | awk -v y="$y" '{print y ";" $7 " " $8}'
+done >> results.csv
+```
