@@ -1,6 +1,7 @@
 # Kubernetes
 
 ## Introdução
+
 Kubernetes é um poderoso sistema open-source, inicialmente desenvolvido pelo Google, para o gerenciamento de aplicações em container em um ambiente clusterizado. Ele visa fornecer melhores maneiras de gerenciar componentes e serviços relacionados e distribuídos em diversas infraestruturas.
 
 Neste guia, vamos discutir alguns conceitos básicos do Kubernetes. Vamos falar sobre a arquitetura do sistema, os problemas que ele resolve, e o modelo que ele utiliza para tratar deployments em container e escalabilidade.
