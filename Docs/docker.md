@@ -69,6 +69,35 @@ Use this command to stop a container on your system that is running. Once the co
 docker stop [CONTAINER_NAME]
 ```
 
+Em alguns casos queremos fazer uma limpeza de todos os containers em nosso ambiente, em execução ou não, para isso podemos utilizar a saída do comando ``docker container ls -a -q`` dentro do comando ``docker rm``. O argumento ``-q`` faz com que somente os IDs dos containers sejam exibidos e o argumento ``-a`` exibe todos os containers, em execução e parados. Outra opção é a utilização do comando ``docker ps -a -q``, sendo mais comum por ser mais rápido na digitação.
+
+```bash
+$ docker container ls -a -q
+b83df1566372
+780a3edaf439
+f1f11e1391f1
+c4690c8a17de
+
+$ docker ps -a -q
+b83df1566372
+780a3edaf439
+f1f11e1391f1
+c4690c8a17de
+```
+
+Agora juntando a saída do comando anterior e utilizando dentro do ``docker rm`` e posteriormente verificando o número de containers com auxílio do comando ``wc -l`` podemos identificar que há **0** containers no ambiente após a limpeza.
+
+```bash
+$ docker rm $(docker ps -a -q)
+b83df1566372
+780a3edaf439
+f1f11e1391f1
+c4690c8a17de
+
+$ docker ps -a -q | wc -l
+0
+```
+
 ### Restarting a Running Container
 
 Occasionally you may need to restart a running container to give it a fresh start. Just replace [CONTAINER_NAME] with the name or ID of the container you would like to restart.
