@@ -14,17 +14,22 @@ Este tutorial pressupõe que você já tenha o Docker instalado em seu sistema. 
 
 ---
 
-## Working with Docker Containers
+## Criando um Container
 
-The below commands are docker commands that can be used when working with containers. Below you will learn how to create, remove, start and stop containers.
-
-### Creating a Container
-
-To create a simple container, use the below command and replace [IMAGE_NAME] with the name of the image you want to run. When you hit the enter key, Docker will search the Docker Hub for that image, download it to your system and create a stopped container.
+Para criar um simples container, iremos utilizar uma imagem existente no repositório do Docker Hub (repositório padrão do Docker).
 
 ```bash
-docker create [IMAGE_NAME]
+$ # docker create <IMAGEM>
+$ docker create ubuntu
+19df91855054b401e8d86f83628c746c1c4cdff1cc5e1204b3ab134aa7a3b4de
+
+$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS    PORTS     NAMES
+19df91855054   ubuntu    "bash"    21 seconds ago   Created             laughing_hodgkin
+$ # O argumento -a exibe todos os container
 ```
+
+Podemos notar acima que o container foi criado utilizando a imagem do ``ubuntu`` e com nome aleatório gerado pelo próprio Docker, porém esse container foi apenas criado e não está em execução.
 
 *Você pode encontrar várias imagens em [Docker Hub](https://registry.hub.docker.com).*
 
