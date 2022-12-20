@@ -33,13 +33,36 @@ Podemos notar acima que o container foi criado utilizando a imagem do ``ubuntu``
 
 *Você pode encontrar várias imagens em [Docker Hub](https://registry.hub.docker.com).*
 
-### Download de uma Imagem
+## Download de Imagem
 
-Você pode baixar a imagem de alguma aplicação diretamente através do seguinte comando:
+Quando vamos criar um container, uma verificação é feita se todos os layers daquela imagem pra aquele container estão presentes, caso contrário o Docker irá efetuar o download dos layers necessários até que a imagem esteja completa. Contudo é possível efetuar o download de determinada imagem previamente com o comando ``docker pull``.
 
 ```bash
-docker pull mysql
+$ # docker pull <IMAGEM>
+$ docker pull mysql
+Using default tag: latest
+latest: Pulling from library/mysql
+2c57acc5afca: Pull complete
+0a990ab965c1: Pull complete
+7acb6a84f0f1: Pull complete
+6a2351a691a4: Pull complete
+cdd0aae0ac1a: Pull complete
+0c024d6bf869: Pull complete
+e536ea8ecf65: Pull complete
+d24661dff86b: Pull complete
+95ef82dfce7a: Pull complete
+c9a31e1bffa1: Pull complete
+4edb4789da39: Pull complete
+Digest: sha256:6f54880f928070a036aa3874d4a3fa203adc28688eb89e9f926a0dcacbce3378
+Status: Downloaded newer image for mysql:latest
+docker.io/library/mysql:latest
+
+$ docker images
+REPOSITORY   TAG       IMAGE ID       CREATED                  SIZE
+mysql        latest    b939d379d46e   Less than a second ago   514MB
 ```
+
+Como não informamos nenhuma tag, foi utilizada a tag padrão latest, o que não é recomendado em automatizações pois dificulta a rastreabilidade e o versionamento do ambiente.
 
 ### Creating and Running a Container
 
